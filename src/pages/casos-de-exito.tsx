@@ -5,7 +5,7 @@ import SuccessCase from '../components/SuccessCase';
 
 const successCases = [
   {
-    title: 'Restauración Sillón Luis XV',
+    title: 'Espejo dorado del Pazo de Meiras',
     era: 'Siglo XVIII',
     initialState: 'Daños estructurales severos y tapicería deteriorada',
     clientNeeds: 'Conservar la tapicería original y reforzar la estructura',

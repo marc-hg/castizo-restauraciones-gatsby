@@ -60,33 +60,6 @@ const services = [
     ],
   },
   {
-    icon: '🪑',
-    title: 'Reproducción de Muebles',
-    description: 'Creación de réplicas exactas de muebles históricos.',
-    steps: [
-      {
-        title: 'Estudio de la pieza original',
-        description: 'Análisis detallado del diseño y técnicas originales.',
-        imageUrl: '/images/estudio.jpg',
-      },
-      {
-        title: 'Selección de materiales',
-        description: 'Elección de maderas y materiales de la más alta calidad.',
-        imageUrl: '/images/materiales.jpg',
-      },
-      {
-        title: 'Construcción',
-        description: 'Fabricación siguiendo técnicas tradicionales.',
-        imageUrl: '/images/construccion.jpg',
-      },
-      {
-        title: 'Acabados históricos',
-        description: 'Aplicación de acabados fieles a la época.',
-        imageUrl: '/images/acabados-historicos.jpg',
-      },
-    ],
-  },
-  {
     icon: '💡',
     title: 'Restauración de Lámparas',
     description: 'Restauración completa de lámparas antiguas.',
@@ -117,7 +90,7 @@ const services = [
 
 const successCases = [
   {
-    title: 'Restauración Sillón Luis XV',
+    title: 'Espejo Pazo de Meiras',
     era: 'Siglo XVIII',
     initialState: 'Daños estructurales severos y tapicería deteriorada',
     clientNeeds: 'Conservar la tapicería original y reforzar la estructura',
@@ -241,7 +214,7 @@ const IndexPage = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimonios" className="py-16 bg-amber-100">
+      {/* <section id="testimonios" className="py-16 bg-amber-100">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Testimonios</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -256,7 +229,7 @@ const IndexPage = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Contact Section */}
       <section id="contacto" className="py-16">

@@ -59,33 +59,6 @@ const services = [
     ],
   },
   {
-    icon: '🪑',
-    title: 'Reproducción de Muebles',
-    description: 'Creación de réplicas exactas de muebles históricos.',
-    steps: [
-      {
-        title: 'Estudio de la pieza original',
-        description: 'Análisis detallado del diseño, medidas y técnicas constructivas originales. Documentamos cada aspecto del mueble.',
-        imageUrl: '/images/estudio.jpg',
-      },
-      {
-        title: 'Selección de materiales',
-        description: 'Elección de maderas y materiales de la más alta calidad, similares a los originales. Trabajamos con proveedores especializados.',
-        imageUrl: '/images/materiales.jpg',
-      },
-      {
-        title: 'Construcción',
-        description: 'Fabricación siguiendo técnicas tradicionales y respetando los métodos de la época. Utilizamos herramientas y técnicas auténticas.',
-        imageUrl: '/images/construccion.jpg',
-      },
-      {
-        title: 'Acabados históricos',
-        description: 'Aplicación de acabados fieles a la época, utilizando productos y técnicas tradicionales. Conseguimos una pátina auténtica.',
-        imageUrl: '/images/acabados-historicos.jpg',
-      },
-    ],
-  },
-  {
     icon: '💡',
     title: 'Restauración de Lámparas',
     description: 'Restauración completa de lámparas antiguas.',
