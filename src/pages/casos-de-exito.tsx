@@ -2,146 +2,7 @@ import * as React from 'react';
 import { HeadFC } from 'gatsby';
 import Layout from '../components/Layout';
 import SuccessCase from '../components/SuccessCase';
-
-const successCases = [
-  {
-    title: 'Espejo dorado del Pazo de Meiras',
-    era: 'Siglo XVIII',
-    initialState: 'Daños estructurales severos y tapicería deteriorada',
-    clientNeeds: 'Conservar la tapicería original y reforzar la estructura',
-    techniques: [
-      'Consolidación de ensambles',
-      'Tratamiento antixilófagos',
-      'Restauración de dorados',
-      'Conservación de tapicería',
-    ],
-    materials: [
-      'Madera de haya para refuerzos',
-      'Pan de oro de 23.75 quilates',
-      'Cola de conejo tradicional',
-      'Telas de época para parches',
-    ],
-    timeInvested: '120 horas',
-    challenges: [
-      'Conservación de la tapicería original del siglo XVIII',
-      'Reparación de patas severamente dañadas',
-      'Recuperación de dorados originales',
-    ],
-    results: 'Recuperación completa de la estabilidad estructural manteniendo el 90% de los materiales originales.',
-    clientQuote: 'El resultado superó todas mis expectativas. Han conseguido preservar la historia de esta pieza familiar.',
-    beforeImage: '/images/sillon-antes.jpg',
-    afterImage: '/images/sillon-despues.jpg',
-  },
-  {
-    title: 'Cómoda Isabelina',
-    era: 'Mediados del Siglo XIX',
-    initialState: 'Pérdida de chapa y problemas en los cajones',
-    clientNeeds: 'Restaurar la funcionalidad y estética original',
-    techniques: [
-      'Reintegración de chapas',
-      'Ajuste de guías de cajones',
-      'Limpieza de bronces',
-      'Acabado a muñequilla',
-    ],
-    materials: [
-      'Chapa de palisandro',
-      'Cola de hueso',
-      'Goma laca',
-      'Cera virgen',
-    ],
-    timeInvested: '85 horas',
-    challenges: [
-      'Reproducción exacta de chapas faltantes',
-      'Recuperación del sistema de guías original',
-      'Conservación de cerraduras de época',
-    ],
-    results: 'Restauración completa de la funcionalidad y estética, respetando las técnicas y materiales de la época.',
-    clientQuote: 'La cómoda ha recuperado todo su esplendor, y los cajones funcionan mejor que nunca.',
-    beforeImage: '/images/comoda-antes.jpg',
-    afterImage: '/images/comoda-despues.jpg',
-  },
-  {
-    title: 'Marco Dorado Rococó',
-    era: 'Siglo XVIII',
-    initialState: 'Pérdida del 40% de dorados y ornamentación',
-    clientNeeds: 'Recuperar el aspecto original',
-    techniques: [
-      'Talla en madera',
-      'Dorado al agua',
-      'Bruñido tradicional',
-      'Pátinas envejecidas',
-    ],
-    materials: [
-      'Pan de oro de diferentes quilates',
-      'Bol rojo y negro',
-      'Madera de tilo para tallas',
-      'Cola de conejo',
-    ],
-    timeInvested: '160 horas',
-    challenges: [
-      'Reproducción de elementos decorativos perdidos',
-      'Integración de dorados nuevos con antiguos',
-      'Conservación de pátinas originales',
-    ],
-    results: 'Recuperación completa de la ornamentación y dorados, manteniendo la pátina histórica en las zonas originales.',
-    beforeImage: '/images/marco-antes.jpg',
-    afterImage: '/images/marco-despues.jpg',
-  },
-  {
-    title: 'Lámpara Art Nouveau',
-    era: 'Principios del Siglo XX',
-    initialState: 'Sistema eléctrico obsoleto y cristales rotos',
-    clientNeeds: 'Actualización eléctrica y restauración estética',
-    techniques: [
-      'Restauración de metales',
-      'Reposición de cristales',
-      'Actualización eléctrica',
-      'Limpieza especializada',
-    ],
-    materials: [
-      'Cristales soplados artesanales',
-      'Componentes eléctricos modernos',
-      'Productos específicos para latón',
-      'Soldadura de plata',
-    ],
-    timeInvested: '75 horas',
-    challenges: [
-      'Fabricación de cristales a medida',
-      'Integración de sistema LED manteniendo la estética',
-      'Restauración de elementos metálicos oxidados',
-    ],
-    results: 'Restauración completa con actualización a tecnología LED y recuperación de todos los elementos decorativos.',
-    beforeImage: '/images/lampara-antes.jpg',
-    afterImage: '/images/lampara-despues.jpg',
-  },
-  {
-    title: 'Bargueño Español',
-    era: 'Siglo XVII',
-    initialState: 'Pérdida de incrustaciones y herrajes',
-    clientNeeds: 'Recuperación de la decoración original',
-    techniques: [
-      'Marquetería',
-      'Forja tradicional',
-      'Dorado a la mixtión',
-      'Restauración de carey',
-    ],
-    materials: [
-      'Maderas nobles variadas',
-      'Hierro forjado',
-      'Pan de oro',
-      'Carey natural',
-    ],
-    timeInvested: '200 horas',
-    challenges: [
-      'Reproducción de incrustaciones perdidas',
-      'Fabricación de herrajes según modelos originales',
-      'Restauración de secretos y mecanismos',
-    ],
-    results: 'Recuperación completa de la funcionalidad y decoración, manteniendo el carácter histórico de la pieza.',
-    beforeImage: '/images/bargueno-antes.jpg',
-    afterImage: '/images/bargueno-despues.jpg',
-  },
-];
+import { successCases } from '../data/successCases';
 
 const SuccessCasesPage = () => {
   return (
@@ -222,7 +83,7 @@ export const Head: HeadFC = () => (
     <title>Casos de Éxito - Dorados y Restauraciones El Madrileño</title>
     <meta
       name="description"
-      content="Explore nuestros casos de éxito en restauración de muebles antiguos. Antes y después de restauraciones profesionales en Madrid."
+      content="Descubre nuestros casos de éxito en restauración de muebles antiguos y dorados con pan de oro."
     />
   </>
 ); 

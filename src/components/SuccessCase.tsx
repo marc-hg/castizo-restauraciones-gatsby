@@ -1,43 +1,137 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import PlaceholderImage from './PlaceholderImage';
 
 interface SuccessCaseProps {
   title: string;
-  era: string;
   initialState: string;
   clientNeeds: string;
   techniques: string[];
   materials: string[];
-  timeInvested: string;
   challenges: string[];
   results: string;
-  clientQuote?: string;
   beforeImage?: string;
   afterImage?: string;
 }
 
 const SuccessCase: React.FC<SuccessCaseProps> = ({
   title,
-  era,
   initialState,
   clientNeeds,
   techniques,
   materials,
-  timeInvested,
   challenges,
   results,
-  clientQuote,
   beforeImage,
   afterImage,
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [sliderPosition, setSliderPosition] = useState(50);
+  const [isDragging, setIsDragging] = useState(false);
+  const sliderRef = useRef<HTMLDivElement>(null);
 
-  const handleSliderChange = (e: React.MouseEvent<HTMLDivElement>) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    const x = e.clientX - rect.left;
+  const handleSliderChange = (clientX: number, element: HTMLDivElement) => {
+    const rect = element.getBoundingClientRect();
+    const x = clientX - rect.left;
     const percentage = (x / rect.width) * 100;
     setSliderPosition(Math.min(Math.max(percentage, 0), 100));
+  };
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      if (isDragging && sliderRef.current) {
+        handleSliderChange(e.clientX, sliderRef.current);
+      }
+    };
+
+    const handleTouchMove = (e: TouchEvent) => {
+      if (isDragging && sliderRef.current && e.touches[0]) {
+        e.preventDefault(); // Prevent scrolling while dragging
+        handleSliderChange(e.touches[0].clientX, sliderRef.current);
+      }
+    };
+
+    const handleMouseUp = () => {
+      setIsDragging(false);
+    };
+
+    const handleTouchEnd = () => {
+      setIsDragging(false);
+    };
+
+    if (isDragging) {
+      document.addEventListener('mousemove', handleMouseMove);
+      document.addEventListener('mouseup', handleMouseUp);
+      document.addEventListener('touchmove', handleTouchMove, { passive: false });
+      document.addEventListener('touchend', handleTouchEnd);
+      document.addEventListener('touchcancel', handleTouchEnd);
+    }
+
+    return () => {
+      document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('mouseup', handleMouseUp);
+      document.removeEventListener('touchmove', handleTouchMove);
+      document.removeEventListener('touchend', handleTouchEnd);
+      document.removeEventListener('touchcancel', handleTouchEnd);
+    };
+  }, [isDragging]);
+
+  const startDragging = (e: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    setIsDragging(true);
+  };
+
+  const renderComparisonSlider = (containerHeight: number) => {
+    if (!beforeImage || !afterImage) {
+      return <PlaceholderImage height={containerHeight} text={title} />;
+    }
+
+    return (
+      <div className="relative w-full h-full" ref={sliderRef}>
+        {/* After image - fixed in background */}
+        <div className="absolute inset-0">
+          <img
+            src={afterImage}
+            alt="Después"
+            className="w-full h-full object-cover rounded-lg"
+          />
+          <div className="absolute top-4 right-4 bg-black bg-opacity-50 text-white px-2 py-1 rounded">
+            Después
+          </div>
+        </div>
+
+        {/* Before image - clipped based on slider position */}
+        <div 
+          className="absolute inset-0"
+          style={{ 
+            clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` 
+          }}
+        >
+          <img
+            src={beforeImage}
+            alt="Antes"
+            className="w-full h-full object-cover rounded-lg"
+          />
+          <div className="absolute top-4 left-4 bg-black bg-opacity-50 text-white px-2 py-1 rounded">
+            Antes
+          </div>
+        </div>
+
+        {/* Slider control */}
+        <div
+          className="absolute inset-y-0 cursor-ew-resize"
+          style={{ left: `${sliderPosition}%` }}
+          onMouseDown={startDragging}
+          onTouchStart={startDragging}
+          onClick={(e) => e.stopPropagation()} // Prevent opening modal when clicking the slider
+        >
+          <div className="absolute inset-y-0 -ml-1 w-2 bg-white"></div>
+          <div className="absolute top-1/2 -ml-4 -mt-4 w-8 h-8 bg-white rounded-full shadow-lg flex items-center justify-center">
+            <span className="text-xs font-bold">⇄</span>
+          </div>
+        </div>
+      </div>
+    );
   };
 
   return (
@@ -47,48 +141,10 @@ const SuccessCase: React.FC<SuccessCaseProps> = ({
           className="relative h-64 cursor-pointer"
           onClick={() => setIsModalOpen(true)}
         >
-          {beforeImage && afterImage ? (
-            <div className="relative w-full h-full">
-              <div className="absolute inset-0">
-                <img
-                  src={afterImage}
-                  alt="Después"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div
-                className="absolute inset-0"
-                style={{ width: `${sliderPosition}%`, overflow: 'hidden' }}
-              >
-                <img
-                  src={beforeImage}
-                  alt="Antes"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div
-                className="absolute inset-y-0"
-                style={{ left: `${sliderPosition}%` }}
-                onMouseDown={(e) => {
-                  const parent = e.currentTarget.parentElement;
-                  if (parent) {
-                    handleSliderChange(e as any);
-                  }
-                }}
-              >
-                <div className="absolute inset-y-0 -ml-1 w-2 bg-white"></div>
-                <div className="absolute top-1/2 -ml-4 -mt-4 w-8 h-8 bg-white rounded-full shadow-lg flex items-center justify-center">
-                  <span className="text-xs font-bold">⇄</span>
-                </div>
-              </div>
-            </div>
-          ) : (
-            <PlaceholderImage height={256} text={title} />
-          )}
+          {renderComparisonSlider(256)}
         </div>
         <div className="p-6">
           <h3 className="text-xl font-bold mb-2">{title}</h3>
-          <p className="text-gray-600 mb-4">{era}</p>
           <button
             onClick={() => setIsModalOpen(true)}
             className="bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-4 rounded transition duration-300"
@@ -116,54 +172,15 @@ const SuccessCase: React.FC<SuccessCaseProps> = ({
               </div>
 
               <div className="relative h-96 mb-6">
-                {beforeImage && afterImage ? (
-                  <div className="relative w-full h-full">
-                    <div className="absolute inset-0">
-                      <img
-                        src={afterImage}
-                        alt="Después"
-                        className="w-full h-full object-cover rounded-lg"
-                      />
-                    </div>
-                    <div
-                      className="absolute inset-0"
-                      style={{ width: `${sliderPosition}%`, overflow: 'hidden' }}
-                    >
-                      <img
-                        src={beforeImage}
-                        alt="Antes"
-                        className="w-full h-full object-cover rounded-lg"
-                      />
-                    </div>
-                    <div
-                      className="absolute inset-y-0"
-                      style={{ left: `${sliderPosition}%` }}
-                      onMouseDown={(e) => {
-                        const parent = e.currentTarget.parentElement;
-                        if (parent) {
-                          handleSliderChange(e as any);
-                        }
-                      }}
-                    >
-                      <div className="absolute inset-y-0 -ml-1 w-2 bg-white"></div>
-                      <div className="absolute top-1/2 -ml-4 -mt-4 w-8 h-8 bg-white rounded-full shadow-lg flex items-center justify-center">
-                        <span className="text-xs font-bold">⇄</span>
-                      </div>
-                    </div>
-                  </div>
-                ) : (
-                  <PlaceholderImage height={384} text={title} />
-                )}
+                {renderComparisonSlider(384)}
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <h3 className="font-bold mb-2">Detalles del Proyecto</h3>
                   <ul className="space-y-2">
-                    <li><span className="font-semibold">Era:</span> {era}</li>
                     <li><span className="font-semibold">Estado Inicial:</span> {initialState}</li>
                     <li><span className="font-semibold">Necesidades del Cliente:</span> {clientNeeds}</li>
-                    <li><span className="font-semibold">Tiempo Invertido:</span> {timeInvested}</li>
                   </ul>
                 </div>
 
@@ -199,13 +216,6 @@ const SuccessCase: React.FC<SuccessCaseProps> = ({
                 <h3 className="font-bold mb-2">Resultados</h3>
                 <p>{results}</p>
               </div>
-
-              {clientQuote && (
-                <div className="mt-6 bg-amber-50 p-4 rounded-lg">
-                  <h3 className="font-bold mb-2">Testimonio del Cliente</h3>
-                  <p className="italic">"{clientQuote}"</p>
-                </div>
-              )}
             </div>
           </div>
         </div>

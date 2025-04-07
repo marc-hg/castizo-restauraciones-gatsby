@@ -1,6 +1,22 @@
 import * as React from 'react';
 import { HeadFC } from 'gatsby';
 import Layout from '../components/Layout';
+import Card from '../components/Card';
+
+const teamMembers = [
+  {
+    name: 'Antonio García',
+    role: 'Maestro Restaurador',
+    description: 'Con más de 30 años de experiencia en restauración de muebles antiguos y especialista en dorados.',
+    imagePlaceholder: 'Foto',
+  },
+  {
+    name: 'María Sánchez',
+    role: 'Especialista en Dorados',
+    description: 'Experta en técnicas tradicionales de dorado al agua y restauración de marcos antiguos.',
+    imagePlaceholder: 'Foto',
+  },
+];
 
 const AboutUsPage = () => {
   return (
@@ -32,55 +48,18 @@ const AboutUsPage = () => {
           <section className="mb-16">
             <h2 className="text-2xl font-bold text-center mb-8">Nuestros Valores</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white rounded-lg shadow-lg p-6">
-                <div className="text-4xl mb-4 text-center">🎨</div>
-                <h3 className="text-xl font-bold mb-4 text-center">Artesanía</h3>
-                <p className="text-gray-600">
-                  Mantenemos vivas las técnicas tradicionales de restauración, adaptándolas a las necesidades actuales sin
-                  perder su esencia.
-                </p>
-              </div>
-              <div className="bg-white rounded-lg shadow-lg p-6">
-                <div className="text-4xl mb-4 text-center">🔍</div>
-                <h3 className="text-xl font-bold mb-4 text-center">Atención al Detalle</h3>
-                <p className="text-gray-600">
-                  Cada pieza recibe una atención meticulosa, cuidando hasta el más mínimo detalle para garantizar
-                  resultados excepcionales.
-                </p>
-              </div>
-              <div className="bg-white rounded-lg shadow-lg p-6">
-                <div className="text-4xl mb-4 text-center">🤝</div>
-                <h3 className="text-xl font-bold mb-4 text-center">Compromiso</h3>
-                <p className="text-gray-600">
-                  Nos comprometemos con cada proyecto, estableciendo una relación de confianza con nuestros clientes y
-                  garantizando su satisfacción.
-                </p>
-              </div>
-            </div>
-          </section>
-
-          {/* Workshop Section */}
-          <section className="mb-16">
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <h2 className="text-2xl font-bold mb-6">Nuestro Taller</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                  <p className="mb-4">
-                    Nuestro taller está equipado con herramientas tradicionales y modernas, creando el ambiente perfecto
-                    para la restauración de muebles antiguos. Disponemos de:
-                  </p>
-                  <ul className="list-disc list-inside space-y-2 text-gray-600">
-                    <li>Zona de carpintería tradicional</li>
-                    <li>Área especializada para dorados</li>
-                    <li>Espacio de acabados y tratamientos</li>
-                    <li>Almacén climatizado para materiales delicados</li>
-                  </ul>
-                </div>
-                <div className="bg-amber-100 h-64 rounded-lg flex items-center justify-center">
-                  {/* Placeholder for workshop image */}
-                  <span className="text-amber-800">Imagen del Taller</span>
-                </div>
-              </div>
+              <Card
+                title="Tradición"
+                description="Mantenemos vivas las técnicas artesanales tradicionales, transmitidas de generación en generación."
+              />
+              <Card
+                title="Calidad"
+                description="Cada pieza recibe el máximo cuidado y atención, garantizando resultados excepcionales."
+              />
+              <Card
+                title="Respeto"
+                description="Preservamos la historia y el carácter único de cada pieza, respetando su origen y época."
+              />
             </div>
           </section>
 
@@ -88,45 +67,15 @@ const AboutUsPage = () => {
           <section>
             <h2 className="text-2xl font-bold text-center mb-8">Nuestro Equipo</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-                <div className="bg-amber-100 h-48 flex items-center justify-center">
-                  {/* Placeholder for team member photo */}
-                  <span className="text-amber-800">Foto</span>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2">Antonio García</h3>
-                  <p className="text-gray-500 mb-4">Maestro Restaurador</p>
-                  <p className="text-gray-600">
-                    Con más de 30 años de experiencia en restauración de muebles antiguos y especialista en dorados.
-                  </p>
-                </div>
-              </div>
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-                <div className="bg-amber-100 h-48 flex items-center justify-center">
-                  {/* Placeholder for team member photo */}
-                  <span className="text-amber-800">Foto</span>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2">María Sánchez</h3>
-                  <p className="text-gray-500 mb-4">Especialista en Dorados</p>
-                  <p className="text-gray-600">
-                    Experta en técnicas tradicionales de dorado al agua y restauración de marcos antiguos.
-                  </p>
-                </div>
-              </div>
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-                <div className="bg-amber-100 h-48 flex items-center justify-center">
-                  {/* Placeholder for team member photo */}
-                  <span className="text-amber-800">Foto</span>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2">Carlos Martín</h3>
-                  <p className="text-gray-500 mb-4">Carpintero Restaurador</p>
-                  <p className="text-gray-600">
-                    Especializado en restauración estructural y reproducción de muebles históricos.
-                  </p>
-                </div>
-              </div>
+              {teamMembers.map((member, index) => (
+                <Card
+                  key={index}
+                  title={member.name}
+                  subtitle={member.role}
+                  description={member.description}
+                  imagePlaceholder={member.imagePlaceholder}
+                />
+              ))}
             </div>
           </section>
         </div>
@@ -142,7 +91,7 @@ export const Head: HeadFC = () => (
     <title>Sobre Nosotros - Dorados y Restauraciones El Madrileño</title>
     <meta
       name="description"
-      content="Conozca nuestra historia, valores y equipo de expertos restauradores en Madrid. Más de dos décadas de experiencia en restauración de muebles antiguos."
+      content="Conoce nuestra historia, valores y equipo de expertos en restauración de muebles antiguos y dorados con pan de oro."
     />
   </>
 ); 
