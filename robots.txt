@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://marc-hg.github.io/castizo-restauraciones-gatsby/sitemap-index.xml
+Host: https://marc-hg.github.io
