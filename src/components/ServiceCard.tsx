@@ -1,16 +1,11 @@
 import React, { useState } from "react";
-
-interface CarouselStep {
-  title: string;
-  description: string;
-  imageUrl: string;
-}
+import ServiceGallery, { ServiceStep } from "./ServiceGallery";
 
 interface ServiceCardProps {
   icon: string;
   title: string;
   description: string;
-  steps: CarouselStep[];
+  steps: ServiceStep[];
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({
@@ -20,28 +15,23 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   steps,
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [currentStep, setCurrentStep] = useState(0);
-
-  const nextStep = () => {
-    setCurrentStep((prev) => (prev + 1) % steps.length);
-  };
-
-  const prevStep = () => {
-    setCurrentStep((prev) => (prev - 1 + steps.length) % steps.length);
-  };
 
   return (
     <>
-      <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition duration-300">
-        <div className="text-4xl mb-4">{icon}</div>
-        <h3 className="text-xl font-bold mb-2">{title}</h3>
-        <p className="text-gray-600 mb-4">{description}</p>
-        <button
-          onClick={() => setIsModalOpen(true)}
-          className="bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-4 rounded transition duration-300"
-        >
-          Ver Más
-        </button>
+      <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition duration-300 flex flex-col h-full">
+        <div>
+          <div className="text-4xl mb-4">{icon}</div>
+          <h3 className="text-xl font-bold mb-2">{title}</h3>
+          <p className="text-gray-600 mb-4">{description}</p>
+        </div>
+        <div className="mt-auto">
+          <button
+            onClick={() => setIsModalOpen(true)}
+            className="bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-4 rounded transition duration-300"
+          >
+            Ver Más
+          </button>
+        </div>
       </div>
 
       {/* Modal */}
@@ -71,79 +61,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
                 </button>
               </div>
 
-              {/* Carousel */}
-              <div className="relative">
-                <img
-                  src={steps[currentStep].imageUrl}
-                  alt={steps[currentStep].title}
-                  className="w-full h-64 object-cover rounded-lg"
-                />
-                <div className="absolute inset-0 flex items-center justify-between p-4">
-                  <button
-                    onClick={prevStep}
-                    className="bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full p-2"
-                  >
-                    <svg
-                      className="h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M15 19l-7-7 7-7"
-                      />
-                    </svg>
-                  </button>
-                  <button
-                    onClick={nextStep}
-                    className="bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full p-2"
-                  >
-                    <svg
-                      className="h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
-                  </button>
-                </div>
-              </div>
-
-              <div className="mt-4">
-                <h3 className="text-xl font-bold mb-2">
-                  {steps[currentStep].title}
-                </h3>
-                <p className="text-gray-600">
-                  {steps[currentStep].description}
-                </p>
-              </div>
-
-              {/* Step indicators */}
-              <div className="flex justify-center space-x-2 mt-4">
-                {steps.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentStep(index)}
-                    className={`h-2 w-2 rounded-full ${
-                      currentStep === index ? "bg-amber-600" : "bg-gray-300"
-                    }`}
-                  />
-                ))}
-              </div>
-
-              <p className="text-xs text-gray-500 italic text-center mt-6 border-t border-gray-200 pt-4">
-                Nota: Los pasos descritos son orientativos y pueden variar según
-                las necesidades específicas de cada pieza y proyecto.
-              </p>
+              <ServiceGallery title={title} steps={steps} isModal={true} />
             </div>
           </div>
         </div>

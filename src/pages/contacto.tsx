@@ -66,15 +66,6 @@ const ContactPage = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="space-y-6">
                     <div>
-                      <h3 className="font-bold mb-2">Horario de Atención</h3>
-                      <ul className="space-y-2 text-gray-600">
-                        <li>Lunes a Viernes: 9:00 - 18:00</li>
-                        <li>Sábados: 10:00 - 14:00</li>
-                        <li>Domingos: Cerrado</li>
-                      </ul>
-                    </div>
-
-                    <div>
                       <h3 className="font-bold mb-2">Área de Servicio</h3>
                       <p className="text-gray-600">
                         Servicio de recogida y entrega en toda la provincia de A
@@ -82,6 +73,14 @@ const ContactPage = () => {
                         <br />
                         (Consultar para otras localidades)
                       </p>
+                    </div>
+                    <div>
+                      <h3 className="font-bold mb-2">Horario de Atención</h3>
+                      <ul className="space-y-2 text-gray-600">
+                        <li>Lunes a Viernes: 9:00 - 18:00</li>
+                        <li>Sábados: 10:00 - 14:00</li>
+                        <li>Domingos: Cerrado</li>
+                      </ul>
                     </div>
 
                     <div>
