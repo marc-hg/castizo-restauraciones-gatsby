@@ -43,22 +43,22 @@ export const services: Service[] = [
       {
         title: 'Preparación de la superficie',
         description: 'Limpieza y preparación del soporte para asegurar una adherencia óptima. Incluye la aplicación de varias capas de yeso mate y fino.',
-        imageUrl: '/images/preparacion-dorado.jpg',
+        imageUrl: '/images/servicios/dorados/1.jpeg',
       },
       {
         title: 'Aplicación del bol',
         description: 'Aplicación de capas de bol rojo o negro según la técnica tradicional. El bol proporciona la base perfecta para el dorado.',
-        imageUrl: '/images/aplicacion-bol.jpg',
+        imageUrl: '/images/servicios/dorados/2.jpeg',
       },
       {
         title: 'Colocación del pan de oro',
         description: 'Aplicación hoja por hoja del pan de oro con máxima precisión. Utilizamos oro de diferentes quilates según las necesidades.',
-        imageUrl: '/images/pan-oro.jpg',
+        imageUrl: '/images/servicios/dorados/3.jpeg',
       },
       {
         title: 'Bruñido',
         description: 'Pulido con piedra de ágata para lograr el brillo característico del oro. Este proceso requiere gran habilidad y experiencia.',
-        imageUrl: '/images/brunido.jpg',
+        imageUrl: '/images/servicios/dorados/4.jpeg',
       },
     ],
   },
@@ -70,22 +70,22 @@ export const services: Service[] = [
       {
         title: 'Evaluación del sistema eléctrico',
         description: 'Inspección y diagnóstico del sistema eléctrico. Identificamos componentes a reemplazar y actualizaciones necesarias.',
-        imageUrl: '/images/evaluacion-electrica.jpg',
+        imageUrl: '/images/servicios/lamparas/1.jpeg',
       },
       {
         title: 'Limpieza de cristales',
         description: 'Limpieza especializada de elementos decorativos y cristales. Utilizamos productos específicos para cada material.',
-        imageUrl: '/images/limpieza-cristales.jpg',
+        imageUrl: '/images/servicios/lamparas/2.jpeg',
       },
       {
         title: 'Restauración de estructura',
         description: 'Reparación y refuerzo de la estructura metálica. Incluye soldaduras y tratamientos contra la oxidación.',
-        imageUrl: '/images/estructura-lampara.jpg',
+        imageUrl: '/images/servicios/lamparas/3.jpeg',
       },
       {
         title: 'Actualización eléctrica',
         description: 'Modernización del sistema eléctrico manteniendo la estética original. Cumplimos con todas las normativas de seguridad.',
-        imageUrl: '/images/actualizacion-electrica.jpg',
+        imageUrl: '/images/servicios/lamparas/4.jpeg',
       },
     ],
   },
