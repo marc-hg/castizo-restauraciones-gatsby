@@ -14,8 +14,8 @@ export const successCases: SuccessCase[] = [
     title: 'Restauración de Consola Tallada',
     initialState: 'Estructura debilitada con ensambles sueltos, pérdida de elementos decorativos y acabado deteriorado',
     clientNeeds: 'Recuperar la estabilidad estructural y restaurar la belleza original de los elementos tallados',
-    beforeImage: '/images/trabajos-realizados/mesa/antes.JPG',
-    afterImage: '/images/trabajos-realizados/mesa/despues.JPG',
+    beforeImage: '/images/trabajos-realizados/mesa/antes.jpg',
+    afterImage: '/images/trabajos-realizados/mesa/despues.jpg',
     techniques: [
       'Consolidación de ensambles',
       'Restauración de tallas',
@@ -54,8 +54,8 @@ export const successCases: SuccessCase[] = [
     title: 'Restauración de Espejo Dorado',
     initialState: 'Marco con estructura comprometida, roturas en las esquinas y pérdida extensa del dorado original',
     clientNeeds: 'Reconstrucción estructural del marco y recuperación del dorado manteniendo la riqueza decorativa original',
-    beforeImage: '/images/trabajos-realizados/espejo-meiras/antes.jpg',
-    afterImage: '/images/trabajos-realizados/espejo-meiras/despues.jpg',
+    beforeImage: '/images/trabajos-realizados/espejo-meiras/antes2.jpg',
+    afterImage: '/images/trabajos-realizados/espejo-meiras/despues2.jpg',
     techniques: [
       'Reconstrucción del bastidor interno',
       'Restauración de tallas decorativas',
@@ -74,8 +74,8 @@ export const successCases: SuccessCase[] = [
     title: 'Querubines Barrocos',
     initialState: 'Pareja de esculturas de querubines con pérdida severa del dorado original, policromía deteriorada y suciedad acumulada',
     clientNeeds: 'Recuperación de la ornamentación dorada y conservación de la policromía original de los rostros',
-    beforeImage: '/images/trabajos-realizados/angeles/antes.jpg',
-    afterImage: '/images/trabajos-realizados/angeles/despues.jpg',
+    beforeImage: '/images/trabajos-realizados/angeles/antes2.jpg',
+    afterImage: '/images/trabajos-realizados/angeles/despues2.jpg',
     techniques: [
       'Limpieza de superficies policromadas',
       'Consolidación de la base de madera',
@@ -94,8 +94,8 @@ export const successCases: SuccessCase[] = [
     title: 'Reloj de Pie Inglés',
     initialState: 'Caja severamente dañada con estructura interna comprometida, pérdida de elementos decorativos y acabado degradado',
     clientNeeds: 'Reconstrucción estructural completa de la caja y restauración del acabado original respetando su estilo',
-    beforeImage: '/images/trabajos-realizados/reloj/antes.jpg',
-    afterImage: '/images/trabajos-realizados/reloj/despues.jpg',
+    beforeImage: '/images/trabajos-realizados/reloj/antes2.jpg',
+    afterImage: '/images/trabajos-realizados/reloj/despues2.jpg',
     techniques: [
       'Reconstrucción de estructura interna',
       'Restauración de la caja de madera',
