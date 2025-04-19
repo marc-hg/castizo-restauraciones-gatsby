@@ -18,11 +18,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <p className="text-xl text-center mt-2">
             Artesanía y Tradición en Restauración de Muebles en A Coruña
           </p>
-          <a href="#contacto" className="block mt-6 text-center">
+          <Link to="/contacto" className="block mt-6 text-center">
             <button className="bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-6 rounded-full transition duration-300">
               Contáctanos Ahora
             </button>
-          </a>
+          </Link>
         </div>
       </header>
 
