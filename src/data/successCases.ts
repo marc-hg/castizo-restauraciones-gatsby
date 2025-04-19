@@ -14,8 +14,8 @@ export const successCases: SuccessCase[] = [
     title: 'Restauración de Consola Tallada',
     initialState: 'Estructura debilitada con ensambles sueltos, pérdida de elementos decorativos y acabado deteriorado',
     clientNeeds: 'Recuperar la estabilidad estructural y restaurar la belleza original de los elementos tallados',
-    beforeImage: '/images/trabajos-realizados/mesa/antes.jpg',
-    afterImage: '/images/trabajos-realizados/mesa/despues.jpg',
+    beforeImage: '/images/trabajos-realizados/mesa/antes2.jpg',
+    afterImage: '/images/trabajos-realizados/mesa/despues2.jpg',
     techniques: [
       'Consolidación de ensambles',
       'Restauración de tallas',
