@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 interface CarouselStep {
   title: string;
@@ -13,7 +13,12 @@ interface ServiceCardProps {
   steps: CarouselStep[];
 }
 
-const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description, steps }) => {
+const ServiceCard: React.FC<ServiceCardProps> = ({
+  icon,
+  title,
+  description,
+  steps,
+}) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentStep, setCurrentStep] = useState(0);
 
@@ -50,8 +55,18 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description, ste
                   onClick={() => setIsModalOpen(false)}
                   className="text-gray-500 hover:text-gray-700"
                 >
-                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  <svg
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M6 18L18 6M6 6l12 12"
+                    />
                   </svg>
                 </button>
               </div>
@@ -68,24 +83,48 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description, ste
                     onClick={prevStep}
                     className="bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full p-2"
                   >
-                    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                    <svg
+                      className="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M15 19l-7-7 7-7"
+                      />
                     </svg>
                   </button>
                   <button
                     onClick={nextStep}
                     className="bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full p-2"
                   >
-                    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    <svg
+                      className="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
                     </svg>
                   </button>
                 </div>
               </div>
 
               <div className="mt-4">
-                <h3 className="text-xl font-bold mb-2">{steps[currentStep].title}</h3>
-                <p className="text-gray-600">{steps[currentStep].description}</p>
+                <h3 className="text-xl font-bold mb-2">
+                  {steps[currentStep].title}
+                </h3>
+                <p className="text-gray-600">
+                  {steps[currentStep].description}
+                </p>
               </div>
 
               {/* Step indicators */}
@@ -95,11 +134,16 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description, ste
                     key={index}
                     onClick={() => setCurrentStep(index)}
                     className={`h-2 w-2 rounded-full ${
-                      currentStep === index ? 'bg-amber-600' : 'bg-gray-300'
+                      currentStep === index ? "bg-amber-600" : "bg-gray-300"
                     }`}
                   />
                 ))}
               </div>
+
+              <p className="text-xs text-gray-500 italic text-center mt-6 border-t border-gray-200 pt-4">
+                Nota: Los pasos descritos son orientativos y pueden variar según
+                las necesidades específicas de cada pieza y proyecto.
+              </p>
             </div>
           </div>
         </div>
@@ -108,4 +152,4 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description, ste
   );
 };
 
-export default ServiceCard; 
+export default ServiceCard;

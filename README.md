@@ -48,14 +48,10 @@ Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
 
 [<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
 
-
-
 ## TODO
-- [ ] Unify data sources
-- [ ] Reutilize components
-- [ ] Change casos de exito for something else (like ejemplos de trabajos realizados)
-- [ ] Finish adding pictures
-- [ ] Think of an easy way for adding trabajos realizados
-- [ ] Finish adding pictures and descriptions
+
+- [ ] Add service pictures
+- [ ] Add real testimonies
+- [ ] Fix ubicacion
 - [ ] Deploy app
 - [ ] SEO

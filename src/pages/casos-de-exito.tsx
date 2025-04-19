@@ -1,24 +1,27 @@
-import * as React from 'react';
-import { HeadFC } from 'gatsby';
-import Layout from '../components/Layout';
-import SuccessCase from '../components/SuccessCase';
-import { successCases } from '../data/successCases';
+import * as React from "react";
+import { HeadFC } from "gatsby";
+import Layout from "../components/Layout";
+import SuccessCase from "../components/SuccessCase";
+import { successCases } from "../data/successCases";
 
 const SuccessCasesPage = () => {
   return (
     <Layout>
       <div className="bg-amber-50 py-16">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold text-center mb-12">Casos de Éxito</h1>
+          <h1 className="text-4xl font-bold text-center mb-12">
+            Trabajos Realizados
+          </h1>
 
           {/* Overview Section */}
           <section className="mb-16">
             <div className="bg-white rounded-lg shadow-lg p-8">
               <h2 className="text-2xl font-bold mb-6">Nuestros Proyectos</h2>
               <p className="text-gray-600 mb-4">
-                Cada proyecto es único y requiere un enfoque personalizado. En esta sección presentamos algunos de nuestros
-                trabajos más destacados, donde podrá apreciar el antes y después de cada restauración, así como los
-                detalles técnicos del proceso.
+                Cada proyecto es único y requiere un enfoque personalizado. En
+                esta sección presentamos algunos de nuestros trabajos más
+                destacados, donde podrá apreciar el antes y después de cada
+                restauración, así como los detalles técnicos del proceso.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
                 <div className="text-center">
@@ -26,7 +29,7 @@ const SuccessCasesPage = () => {
                   <p className="text-gray-600">Piezas Restauradas</p>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-amber-600">20+</div>
+                  <div className="text-4xl font-bold text-amber-600">40+</div>
                   <p className="text-gray-600">Años de Experiencia</p>
                 </div>
                 <div className="text-center">
@@ -47,10 +50,12 @@ const SuccessCasesPage = () => {
           {/* Call to Action */}
           <section className="mt-16">
             <div className="bg-amber-100 rounded-lg shadow-lg p-8 text-center">
-              <h2 className="text-2xl font-bold mb-4">¿Tiene un Proyecto Similar?</h2>
+              <h2 className="text-2xl font-bold mb-4">
+                ¿Tiene un Proyecto Similar?
+              </h2>
               <p className="text-gray-600 mb-6">
-                Contáctenos para discutir su proyecto de restauración. Ofrecemos presupuestos personalizados y asesoramiento
-                profesional.
+                Contáctenos para discutir su proyecto de restauración. Ofrecemos
+                presupuestos personalizados y asesoramiento profesional.
               </p>
               <div className="flex justify-center space-x-4">
                 <a
@@ -80,10 +85,10 @@ export default SuccessCasesPage;
 
 export const Head: HeadFC = () => (
   <>
-    <title>Casos de Éxito - Dorados y Restauraciones El Madrileño</title>
+    <title>Trabajos Realizados - Dorados y Restauraciones El Madrileño</title>
     <meta
       name="description"
-      content="Descubre nuestros casos de éxito en restauración de muebles antiguos y dorados con pan de oro."
+      content="Descubre nuestros trabajos realizados en restauración de muebles antiguos y dorados con pan de oro."
     />
   </>
-); 
+);

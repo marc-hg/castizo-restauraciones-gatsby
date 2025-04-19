@@ -20,22 +20,22 @@ export const services: Service[] = [
       {
         title: 'Evaluación inicial',
         description: 'Analizamos el estado actual del mueble para determinar el mejor proceso de restauración.',
-        imageUrl: '/images/evaluacion-inicial.jpg',
+        imageUrl: '/images/servicios/restauracion-muebles/1.jpg',
       },
       {
         title: 'Limpieza y tratamiento',
         description: 'Eliminación de barnices antiguos y tratamiento contra agentes dañinos.',
-        imageUrl: '/images/limpieza.jpg',
+        imageUrl: '/images/servicios/restauracion-muebles/2.jpg',
       },
       {
         title: 'Reparación estructural',
         description: 'Refuerzo de estructuras y reparación de elementos dañados.',
-        imageUrl: '/images/reparacion.jpg',
+        imageUrl: '/images/servicios/restauracion-muebles/3.jpg',
       },
       {
         title: 'Acabados',
         description: 'Aplicación de acabados tradicionales respetando la época del mueble.',
-        imageUrl: '/images/acabados.jpg',
+        imageUrl: '/images/servicios/restauracion-muebles/4.jpg',
       },
     ],
   },
