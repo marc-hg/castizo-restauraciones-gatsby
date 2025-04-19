@@ -34,12 +34,6 @@ const AboutUsPage = () => {
                   la restauración de muebles antiguos y la aplicación de
                   técnicas tradicionales de dorado.
                 </p>
-                <p className="mb-4">
-                  Nuestro taller, ubicado en el corazón de Madrid, se ha
-                  convertido en un referente para coleccionistas, anticuarios y
-                  amantes de los muebles antiguos que buscan un trabajo
-                  meticuloso y respetuoso con las técnicas originales.
-                </p>
               </div>
             </div>
           </section>
