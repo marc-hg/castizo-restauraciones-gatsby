@@ -12,7 +12,7 @@ git push origin main
 
 ## 2. Enable GitHub Pages in repository settings
 
-1. Go to your GitHub repository: https://github.com/marc-hg/castizorestauraciones
+1. Go to your GitHub repository: https://github.com/marc-hg/castizo-restauraciones-gatsby
 2. Click on "Settings" tab
 3. In the left sidebar, click on "Pages"
 4. Under "Build and deployment", select:
@@ -23,7 +23,7 @@ git push origin main
 
 1. After pushing changes, go to the "Actions" tab in your repository
 2. You should see the workflow "Deploy Gatsby site to GitHub Pages" running
-3. Once completed, your site will be available at: https://marc-hg.github.io/castizorestauraciones/
+3. Once completed, your site will be available at: https://marc-hg.github.io/castizo-restauraciones-gatsby/
 
 ## 4. Configure custom domain (optional)
 
@@ -38,5 +38,5 @@ If you have a custom domain:
 ## Troubleshooting
 
 - If you see a 404 page, make sure your GitHub Pages is enabled and the workflow has completed successfully
-- If images or links are broken, verify the `pathPrefix` is correctly set to `/castizorestauraciones`
+- If images or links are broken, verify the `pathPrefix` is correctly set to `/castizo-restauraciones-gatsby`
 - Check the Actions tab for any deployment errors

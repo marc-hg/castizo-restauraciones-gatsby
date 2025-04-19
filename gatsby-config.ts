@@ -3,13 +3,13 @@ import type { GatsbyConfig } from "gatsby";
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `Castizo Restauraciones`,
-    siteUrl: `https://marc-hg.github.io/castizorestauraciones`
+    siteUrl: `https://marc-hg.github.io/castizo-restauraciones-gatsby`
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
-  pathPrefix: `/castizorestauraciones`,
+  pathPrefix: `/castizo-restauraciones-gatsby`,
   plugins: [
     "gatsby-plugin-postcss", 
     "gatsby-plugin-image", 
@@ -42,8 +42,8 @@ const config: GatsbyConfig = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://marc-hg.github.io/castizorestauraciones',
-        sitemap: 'https://marc-hg.github.io/castizorestauraciones/sitemap-index.xml',
+        host: 'https://marc-hg.github.io/castizo-restauraciones-gatsby',
+        sitemap: 'https://marc-hg.github.io/castizo-restauraciones-gatsby/sitemap-index.xml',
         policy: [{ userAgent: '*', allow: '/' }]
       }
     }
