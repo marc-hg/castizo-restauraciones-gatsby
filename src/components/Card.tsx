@@ -1,5 +1,5 @@
 import React from "react";
-import { getImagePath } from "../utils/imageUtils";
+import { withPrefix } from "gatsby";
 
 interface CardProps {
   title: string;
@@ -31,7 +31,7 @@ const Card: React.FC<CardProps> = ({
         <div className="bg-amber-100 h-48 flex items-center justify-center">
           {imageUrl ? (
             <img
-              src={getImagePath(imageUrl)}
+              src={withPrefix(imageUrl)}
               alt={title}
               className="w-full h-full object-cover"
             />

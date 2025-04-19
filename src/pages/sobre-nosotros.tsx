@@ -1,8 +1,7 @@
 import * as React from "react";
-import { HeadFC } from "gatsby";
+import { HeadFC, withPrefix } from "gatsby";
 import Layout from "../components/Layout";
 import Card from "../components/Card";
-import { getImagePath } from "../utils/imageUtils";
 
 const teamMembers = [
   {
@@ -51,7 +50,7 @@ const AboutUsPage = () => {
               <div className="grid md:grid-cols-2 gap-0">
                 <div className="h-[500px]">
                   <img
-                    src={getImagePath("/images/paco/paco.jpg")}
+                    src={withPrefix("/images/paco/paco.jpg")}
                     alt="Francisco Javier Horno Escribano"
                     className="w-full h-full object-cover"
                   />

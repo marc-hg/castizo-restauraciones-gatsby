@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { getImagePath } from "../utils/imageUtils";
+import { withPrefix } from "gatsby";
 
 export interface ServiceStep {
   title: string;
@@ -36,7 +36,7 @@ const ServiceGallery: React.FC<ServiceGalleryProps> = ({
       {/* Carousel */}
       <div className="relative">
         <img
-          src={getImagePath(steps[currentStep].imageUrl)}
+          src={withPrefix(steps[currentStep].imageUrl)}
           alt={steps[currentStep].title}
           className={`w-full ${imageHeight} object-cover rounded-lg`}
         />

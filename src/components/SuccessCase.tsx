@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import PlaceholderImage from "./PlaceholderImage";
-import { getImagePath } from "../utils/imageUtils";
+import { withPrefix } from "gatsby";
 
 interface SuccessCaseProps {
   title: string;
@@ -94,7 +94,7 @@ const SuccessCase: React.FC<SuccessCaseProps> = ({
         {/* After image - fixed in background */}
         <div className="absolute inset-0">
           <img
-            src={getImagePath(afterImage)}
+            src={withPrefix(afterImage)}
             alt="Después"
             className="w-full h-full object-cover rounded-lg"
           />
@@ -111,7 +111,7 @@ const SuccessCase: React.FC<SuccessCaseProps> = ({
           }}
         >
           <img
-            src={getImagePath(beforeImage)}
+            src={withPrefix(beforeImage)}
             alt="Antes"
             className="w-full h-full object-cover rounded-lg"
           />
