@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import PlaceholderImage from "./PlaceholderImage";
-import { withPrefix } from "gatsby";
 
 interface SuccessCaseProps {
   title: string;
@@ -94,7 +93,7 @@ const SuccessCase: React.FC<SuccessCaseProps> = ({
         {/* After image - fixed in background */}
         <div className="absolute inset-0">
           <img
-            src={withPrefix(afterImage)}
+            src={afterImage}
             alt="Después"
             className="w-full h-full object-cover rounded-lg"
           />
@@ -111,7 +110,7 @@ const SuccessCase: React.FC<SuccessCaseProps> = ({
           }}
         >
           <img
-            src={withPrefix(beforeImage)}
+            src={beforeImage}
             alt="Antes"
             className="w-full h-full object-cover rounded-lg"
           />
