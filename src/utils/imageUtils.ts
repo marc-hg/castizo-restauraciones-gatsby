@@ -5,6 +5,11 @@ import { withPrefix } from 'gatsby';
  * This ensures images load correctly when deployed with a path prefix
  */
 export const getImagePath = (path: string): string => {
+  // If no path provided, return empty string
+  if (!path) {
+    return '';
+  }
+
   // Handle absolute URLs (starting with http or https)
   if (path.startsWith('http://') || path.startsWith('https://')) {
     return path;
