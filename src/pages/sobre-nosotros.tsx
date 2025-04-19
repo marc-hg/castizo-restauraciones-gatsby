@@ -1,14 +1,16 @@
-import * as React from 'react';
-import { HeadFC } from 'gatsby';
-import Layout from '../components/Layout';
-import Card from '../components/Card';
+import * as React from "react";
+import { HeadFC } from "gatsby";
+import Layout from "../components/Layout";
+import Card from "../components/Card";
+import { getImagePath } from "../utils/imageUtils";
 
 const teamMembers = [
   {
-    name: 'Francisco Javier Horno Escribano',
-    role: 'Maestro Restaurador',
-    description: 'Con más de 40 años de experiencia en restauración de muebles antiguos y especialista en dorados. Su dedicación y maestría artesanal le han convertido en un referente en el sector.',
-    imageUrl: '/images/paco/paco.jpg',
+    name: "Francisco Javier Horno Escribano",
+    role: "Maestro Restaurador",
+    description:
+      "Con más de 40 años de experiencia en restauración de muebles antiguos y especialista en dorados. Su dedicación y maestría artesanal le han convertido en un referente en el sector.",
+    imageUrl: "/images/paco/paco.jpg",
   },
 ];
 
@@ -17,7 +19,9 @@ const AboutUsPage = () => {
     <Layout>
       <div className="bg-amber-50 py-16">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold text-center mb-12">Sobre Nosotros</h1>
+          <h1 className="text-4xl font-bold text-center mb-12">
+            Sobre Nosotros
+          </h1>
 
           {/* Historia Section */}
           <section className="mb-16">
@@ -25,14 +29,17 @@ const AboutUsPage = () => {
               <h2 className="text-2xl font-bold mb-6">Nuestra Historia</h2>
               <div className="prose max-w-none">
                 <p className="mb-4">
-                  Dorados y Restauraciones El Madrileño nace de una pasión por la artesanía y la preservación del patrimonio
-                  mueble. Con más de cuatro décadas de experiencia, nos hemos especializado en la restauración de muebles
-                  antiguos y la aplicación de técnicas tradicionales de dorado.
+                  Dorados y Restauraciones El Madrileño nace de una pasión por
+                  la artesanía y la preservación del patrimonio mueble. Con más
+                  de cuatro décadas de experiencia, nos hemos especializado en
+                  la restauración de muebles antiguos y la aplicación de
+                  técnicas tradicionales de dorado.
                 </p>
                 <p className="mb-4">
-                  Nuestro taller, ubicado en el corazón de Madrid, se ha convertido en un referente para coleccionistas,
-                  anticuarios y amantes de los muebles antiguos que buscan un trabajo meticuloso y respetuoso con las
-                  técnicas originales.
+                  Nuestro taller, ubicado en el corazón de Madrid, se ha
+                  convertido en un referente para coleccionistas, anticuarios y
+                  amantes de los muebles antiguos que buscan un trabajo
+                  meticuloso y respetuoso con las técnicas originales.
                 </p>
               </div>
             </div>
@@ -43,18 +50,23 @@ const AboutUsPage = () => {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <div className="grid md:grid-cols-2 gap-0">
                 <div className="h-[500px]">
-                  <img 
-                    src="/images/paco/paco.jpg" 
-                    alt="Francisco Javier Horno Escribano" 
+                  <img
+                    src={getImagePath("/images/paco/paco.jpg")}
+                    alt="Francisco Javier Horno Escribano"
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="p-8 flex flex-col justify-center">
-                  <h2 className="text-3xl font-bold mb-4">Francisco Javier Horno Escribano</h2>
-                  <h3 className="text-xl text-gray-600 mb-4">Maestro Restaurador</h3>
+                  <h2 className="text-3xl font-bold mb-4">
+                    Francisco Javier Horno Escribano
+                  </h2>
+                  <h3 className="text-xl text-gray-600 mb-4">
+                    Maestro Restaurador
+                  </h3>
                   <p className="text-gray-600">
-                    Con más de 40 años de experiencia en restauración de muebles antiguos y especialista en dorados. 
-                    Su dedicación y maestría artesanal le han convertido en un referente en el sector.
+                    Con más de 40 años de experiencia en restauración de muebles
+                    antiguos y especialista en dorados. Su dedicación y maestría
+                    artesanal le han convertido en un referente en el sector.
                   </p>
                 </div>
               </div>
@@ -63,7 +75,9 @@ const AboutUsPage = () => {
 
           {/* Values Section */}
           <section className="mb-16">
-            <h2 className="text-2xl font-bold text-center mb-8">Nuestros Valores</h2>
+            <h2 className="text-2xl font-bold text-center mb-8">
+              Nuestros Valores
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <Card
                 title="Tradición"
@@ -95,4 +109,4 @@ export const Head: HeadFC = () => (
       content="Conoce nuestra historia, valores y al maestro artesano Francisco Javier Horno Escribano con más de 40 años de experiencia en restauración."
     />
   </>
-); 
+);

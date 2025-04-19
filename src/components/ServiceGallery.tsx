@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { getImagePath } from "../utils/imageUtils";
 
 export interface ServiceStep {
   title: string;
@@ -35,7 +36,7 @@ const ServiceGallery: React.FC<ServiceGalleryProps> = ({
       {/* Carousel */}
       <div className="relative">
         <img
-          src={steps[currentStep].imageUrl}
+          src={getImagePath(steps[currentStep].imageUrl)}
           alt={steps[currentStep].title}
           className={`w-full ${imageHeight} object-cover rounded-lg`}
         />

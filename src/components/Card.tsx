@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import { getImagePath } from "../utils/imageUtils";
 
 interface CardProps {
   title: string;
@@ -20,14 +21,20 @@ const Card: React.FC<CardProps> = ({
   onClick,
 }) => {
   return (
-    <div 
-      className={`bg-white rounded-lg shadow-lg overflow-hidden ${onClick ? 'cursor-pointer' : ''}`}
+    <div
+      className={`bg-white rounded-lg shadow-lg overflow-hidden ${
+        onClick ? "cursor-pointer" : ""
+      }`}
       onClick={onClick}
     >
       {(imageUrl || imagePlaceholder) && (
         <div className="bg-amber-100 h-48 flex items-center justify-center">
           {imageUrl ? (
-            <img src={imageUrl} alt={title} className="w-full h-full object-cover" />
+            <img
+              src={getImagePath(imageUrl)}
+              alt={title}
+              className="w-full h-full object-cover"
+            />
           ) : (
             <span className="text-amber-800">{imagePlaceholder}</span>
           )}
@@ -43,4 +50,4 @@ const Card: React.FC<CardProps> = ({
   );
 };
 
-export default Card; 
+export default Card;
