@@ -1,57 +1,55 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby Minimal TypeScript Starter
-</h1>
+# Castizo Restauraciones
+
+Website for Castizo Restauraciones built with Gatsby and deployed to GitHub Pages.
 
 ## 🚀 Quick start
 
-1.  **Create a Gatsby site.**
+1. **Start developing.**
 
-    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
+   ```shell
+   npm run develop
+   ```
 
-    ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby -- -ts
-    ```
+2. **Build and serve locally.**
 
-2.  **Start developing.**
+   ```shell
+   npm run build
+   npm run serve
+   ```
 
-    Navigate into your new site’s directory and start it up.
+3. **Deploy to GitHub Pages.**
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+   ```shell
+   npm run deploy
+   ```
 
-3.  **Open the code and start customizing!**
+   This command builds the site with path prefixes and publishes it to the `gh-pages` branch.
 
-    Your site is now running at http://localhost:8000!
+## 🔧 SEO Implementation
 
-    Edit `src/pages/index.tsx` to see your site update in real-time!
+This site includes:
 
-4.  **Learn more**
+- Pre-rendered HTML for optimal search engine crawling
+- Proper meta tags on all pages
+- Sitemap generation via gatsby-plugin-sitemap
+- Robots.txt via gatsby-plugin-robots-txt
+- Optimized images via gatsby-plugin-image
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+## 📦 GitHub Pages Deployment
 
-## 🚀 Quick start (Netlify)
+The site is configured for GitHub Pages deployment:
 
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
+1. **Manual deployment:**
 
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
+   - Run `npm run deploy` to build and push to the gh-pages branch
 
-## TODO
+2. **Automatic deployment:**
+   - Pushing to the main branch triggers the GitHub Actions workflow
+   - The site is automatically built and deployed to GitHub Pages
+
+## 📝 TODO
 
 - [ ] Add service pictures
 - [ ] Add real testimonies
 - [ ] Fix ubicacion
-- [ ] Deploy app
-- [ ] SEO
+- [ ] SEO optimizations

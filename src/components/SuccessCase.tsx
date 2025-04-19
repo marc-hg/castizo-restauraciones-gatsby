@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import PlaceholderImage from './PlaceholderImage';
+import React, { useState, useEffect, useRef } from "react";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import PlaceholderImage from "./PlaceholderImage";
 
 interface SuccessCaseProps {
   title: string;
@@ -8,7 +8,6 @@ interface SuccessCaseProps {
   clientNeeds: string;
   techniques: string[];
   materials: string[];
-  challenges: string[];
   results: string;
   beforeImage?: string;
   afterImage?: string;
@@ -20,7 +19,6 @@ const SuccessCase: React.FC<SuccessCaseProps> = ({
   clientNeeds,
   techniques,
   materials,
-  challenges,
   results,
   beforeImage,
   afterImage,
@@ -60,23 +58,27 @@ const SuccessCase: React.FC<SuccessCaseProps> = ({
     };
 
     if (isDragging) {
-      document.addEventListener('mousemove', handleMouseMove);
-      document.addEventListener('mouseup', handleMouseUp);
-      document.addEventListener('touchmove', handleTouchMove, { passive: false });
-      document.addEventListener('touchend', handleTouchEnd);
-      document.addEventListener('touchcancel', handleTouchEnd);
+      document.addEventListener("mousemove", handleMouseMove);
+      document.addEventListener("mouseup", handleMouseUp);
+      document.addEventListener("touchmove", handleTouchMove, {
+        passive: false,
+      });
+      document.addEventListener("touchend", handleTouchEnd);
+      document.addEventListener("touchcancel", handleTouchEnd);
     }
 
     return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
-      document.removeEventListener('mouseup', handleMouseUp);
-      document.removeEventListener('touchmove', handleTouchMove);
-      document.removeEventListener('touchend', handleTouchEnd);
-      document.removeEventListener('touchcancel', handleTouchEnd);
+      document.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener("mouseup", handleMouseUp);
+      document.removeEventListener("touchmove", handleTouchMove);
+      document.removeEventListener("touchend", handleTouchEnd);
+      document.removeEventListener("touchcancel", handleTouchEnd);
     };
   }, [isDragging]);
 
-  const startDragging = (e: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>) => {
+  const startDragging = (
+    e: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>
+  ) => {
     e.preventDefault();
     setIsDragging(true);
   };
@@ -101,10 +103,10 @@ const SuccessCase: React.FC<SuccessCaseProps> = ({
         </div>
 
         {/* Before image - clipped based on slider position */}
-        <div 
+        <div
           className="absolute inset-0"
-          style={{ 
-            clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` 
+          style={{
+            clipPath: `inset(0 ${100 - sliderPosition}% 0 0)`,
           }}
         >
           <img
@@ -165,56 +167,84 @@ const SuccessCase: React.FC<SuccessCaseProps> = ({
                   onClick={() => setIsModalOpen(false)}
                   className="text-gray-500 hover:text-gray-700"
                 >
-                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  <svg
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M6 18L18 6M6 6l12 12"
+                    />
                   </svg>
                 </button>
               </div>
 
-              <div className="relative h-96 mb-6">
+              <div className="relative h-96 mb-8">
                 {renderComparisonSlider(384)}
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <h3 className="font-bold mb-2">Detalles del Proyecto</h3>
+              {/* Project Overview */}
+              <div className="bg-amber-50 p-6 rounded-lg mb-8">
+                <h3 className="text-xl font-bold mb-4 text-amber-800">
+                  Descripción del Proyecto
+                </h3>
+                <div className="space-y-4">
+                  <div>
+                    <h4 className="font-bold text-amber-700">Estado Inicial</h4>
+                    <p className="mt-1">{initialState}</p>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-amber-700">
+                      Necesidades del Cliente
+                    </h4>
+                    <p className="mt-1">{clientNeeds}</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Two-column section for techniques and materials */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                {/* Techniques */}
+                <div className="bg-gray-50 p-6 rounded-lg">
+                  <h3 className="text-lg font-bold mb-3 border-b pb-2">
+                    Técnicas Utilizadas
+                  </h3>
                   <ul className="space-y-2">
-                    <li><span className="font-semibold">Estado Inicial:</span> {initialState}</li>
-                    <li><span className="font-semibold">Necesidades del Cliente:</span> {clientNeeds}</li>
+                    {techniques.map((technique, index) => (
+                      <li key={index} className="flex items-start">
+                        <span className="text-amber-600 mr-2">•</span>
+                        <span>{technique}</span>
+                      </li>
+                    ))}
                   </ul>
                 </div>
 
-                <div>
-                  <h3 className="font-bold mb-2">Técnicas Utilizadas</h3>
-                  <ul className="list-disc list-inside space-y-1">
-                    {techniques.map((technique, index) => (
-                      <li key={index}>{technique}</li>
+                {/* Materials */}
+                <div className="bg-gray-50 p-6 rounded-lg">
+                  <h3 className="text-lg font-bold mb-3 border-b pb-2">
+                    Materiales Empleados
+                  </h3>
+                  <ul className="space-y-2">
+                    {materials.map((material, index) => (
+                      <li key={index} className="flex items-start">
+                        <span className="text-amber-600 mr-2">•</span>
+                        <span>{material}</span>
+                      </li>
                     ))}
                   </ul>
                 </div>
               </div>
 
-              <div className="mt-6">
-                <h3 className="font-bold mb-2">Materiales Empleados</h3>
-                <ul className="list-disc list-inside space-y-1">
-                  {materials.map((material, index) => (
-                    <li key={index}>{material}</li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="mt-6">
-                <h3 className="font-bold mb-2">Desafíos y Soluciones</h3>
-                <ul className="list-disc list-inside space-y-1">
-                  {challenges.map((challenge, index) => (
-                    <li key={index}>{challenge}</li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="mt-6">
-                <h3 className="font-bold mb-2">Resultados</h3>
-                <p>{results}</p>
+              {/* Results */}
+              <div className="bg-green-50 p-6 rounded-lg mb-4">
+                <h3 className="text-lg font-bold mb-3 text-green-800">
+                  Resultados
+                </h3>
+                <p className="text-green-900">{results}</p>
               </div>
             </div>
           </div>
@@ -224,4 +254,4 @@ const SuccessCase: React.FC<SuccessCaseProps> = ({
   );
 };
 
-export default SuccessCase; 
+export default SuccessCase;
