@@ -55,7 +55,7 @@ export const successCases: SuccessCase[] = [
     initialState: 'Marco con estructura comprometida, roturas en las esquinas y pérdida extensa del dorado original',
     clientNeeds: 'Reconstrucción estructural del marco y recuperación del dorado manteniendo la riqueza decorativa original',
     beforeImage: '/images/trabajos-realizados/espejo-meiras/antes2.jpg',
-    afterImage: '/images/trabajos-realizados/espejo-meiras/despues2.jpg',
+    afterImage: '/images/trabajos-realizados/espejo-meiras/despues3.jpg',
     techniques: [
       'Reconstrucción del bastidor interno',
       'Restauración de tallas decorativas',
