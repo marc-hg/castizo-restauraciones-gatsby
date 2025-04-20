@@ -197,4 +197,31 @@ export const services: Service[] = [
       },
     ],
   },
+  {
+    icon: '✨',
+    title: 'Pulido de Bronce',
+    description: 'Restauración y pulido de piezas de bronce como atriles, candelabros y candeleros.',
+    steps: [
+      {
+        title: 'Evaluación inicial',
+        description: 'Examinamos el estado actual de la pieza de bronce, identificando pátinas, oxidaciones y daños estructurales que requieran atención especial.',
+        imageUrl: '/images/servicios/bronce/1.jpeg',
+      },
+      {
+        title: 'Limpieza profunda',
+        description: 'Eliminación de suciedad, óxido y residuos acumulados utilizando productos específicos para bronce que respetan la integridad del metal.',
+        imageUrl: '/images/servicios/bronce/2.jpeg',
+      },
+      {
+        title: 'Pulido artesanal',
+        description: 'Aplicación de técnicas tradicionales de pulido para recuperar el brillo y textura originales del bronce, respetando la pátina histórica cuando sea apropiado.',
+        imageUrl: '/images/servicios/bronce/3.jpeg',
+      },
+      {
+        title: 'Protección final',
+        description: 'Aplicación de tratamientos protectores que preservan el acabado y previenen futuras oxidaciones, manteniendo la belleza del bronce a largo plazo.',
+        imageUrl: '/images/servicios/bronce/4.jpeg',
+      },
+    ],
+  },
 ]; 
