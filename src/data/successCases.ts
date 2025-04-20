@@ -30,7 +30,7 @@ export const successCases: SuccessCase[] = [
   },
   {
     title: 'Lámpara de Cristal Colgante',
-    initialState: 'Lámpara de latón dañada por el fuego, con cristales sucios y faltantes, y cableado eléctrico obsoleto',
+    initialState: 'Lámpara de latón dañada por el fuego, con cristales sucios y faltantes, y cableado eléctrico quemado',
     clientNeeds: 'Restauración de la estructura de latón, limpieza y reposición de cristales, y actualización del sistema eléctrico',
     beforeImage: '/images/trabajos-realizados/lampara/antes.jpg',
     afterImage: '/images/trabajos-realizados/lampara/despues.jpg',
@@ -58,13 +58,12 @@ export const successCases: SuccessCase[] = [
       'Reconstrucción del bastidor interno',
       'Restauración de tallas decorativas',
       'Dorado al agua con bruñido',
-      'Instalación de espejo nuevo',
+      'Instalación de espejo restaurado',
     ],
     materials: [
       'Madera de pino para bastidor',
       'Pan de oro de 23.75 quilates',
       'Bol rojo tradicional',
-      'Cristal biselado nuevo',
     ],
     results: 'Restauración completa del espejo recuperando toda la ornamentación dorada y proporcionando una estructura sólida que garantiza su conservación a largo plazo.',
   },

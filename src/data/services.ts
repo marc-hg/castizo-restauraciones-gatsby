@@ -89,4 +89,112 @@ export const services: Service[] = [
       },
     ],
   },
+  {
+    icon: '🏠',
+    title: 'Restauraciones de Interior de Casas Rústicas',
+    description: 'Rehabilitación y tratamiento de elementos estructurales y decorativos en casas rústicas.',
+    steps: [
+      {
+        title: 'Diagnóstico integral',
+        description: 'Evaluación completa de vigas, mobiliario y elementos estructurales. Identificamos daños por polilla, humedad y otros agentes.',
+        imageUrl: '/images/servicios/casas-rusticas/1.jpeg',
+      },
+      {
+        title: 'Tratamiento antipolilla',
+        description: 'Aplicación de tratamientos preventivos y curativos contra xilófagos. Utilizamos productos de alta eficacia y durabilidad.',
+        imageUrl: '/images/servicios/casas-rusticas/2.jpeg',
+      },
+      {
+        title: 'Restauración de vigas',
+        description: 'Recuperación y refuerzo de vigas antiguas manteniendo su aspecto original. Combinamos técnicas tradicionales con soluciones modernas.',
+        imageUrl: '/images/servicios/casas-rusticas/3.jpeg',
+      },
+      {
+        title: 'Acabados rústicos',
+        description: 'Aplicación de acabados que respetan y realzan la estética rústica original. Trabajamos con materiales naturales y tradicionales.',
+        imageUrl: '/images/servicios/casas-rusticas/4.jpeg',
+      },
+    ],
+  },
+  {
+    icon: '🪑',
+    title: 'Reproducción de Muebles',
+    description: 'Creación de réplicas exactas de muebles históricos con técnicas artesanales.',
+    steps: [
+      {
+        title: 'Estudio y documentación',
+        description: 'Análisis detallado del mueble original o documentación histórica. Estudiamos materiales, técnicas y características específicas.',
+        imageUrl: '/images/servicios/reproduccion/1.jpeg',
+      },
+      {
+        title: 'Selección de materiales',
+        description: 'Búsqueda y selección de maderas y materiales que coincidan con el original. Priorizamos calidad y autenticidad.',
+        imageUrl: '/images/servicios/reproduccion/2.jpeg',
+      },
+      {
+        title: 'Construcción artesanal',
+        description: 'Fabricación siguiendo técnicas tradicionales de la época. Utilizamos herramientas y métodos fieles a los originales.',
+        imageUrl: '/images/servicios/reproduccion/3.jpeg',
+      },
+      {
+        title: 'Acabados históricos',
+        description: 'Aplicación de acabados que reproducen fielmente la pátina y aspecto del mueble original. Cada pieza es única y auténtica.',
+        imageUrl: '/images/servicios/reproduccion/4.jpeg',
+      },
+    ],
+  },
+  {
+    icon: '🧶',
+    title: 'Restauración de Rejillas de Mimbre',
+    description: 'Recuperación artesanal de asientos y respaldos de rejilla en sillas antiguas.',
+    steps: [
+      {
+        title: 'Retirada de rejilla deteriorada',
+        description: 'Eliminación cuidadosa del material dañado preservando el marco. Limpiamos y preparamos la estructura para el nuevo tejido.',
+        imageUrl: '/images/servicios/rejillas/1.jpeg',
+      },
+      {
+        title: 'Preparación del marco',
+        description: 'Acondicionamiento y reparación del marco que soportará la nueva rejilla. Reforzamos puntos débiles y tratamos la madera.',
+        imageUrl: '/images/servicios/rejillas/2.jpeg',
+      },
+      {
+        title: 'Tejido artesanal',
+        description: 'Realización del nuevo tejido de mimbre siguiendo patrones tradicionales. Cada pieza se teje a mano con materiales naturales.',
+        imageUrl: '/images/servicios/rejillas/3.jpeg',
+      },
+      {
+        title: 'Acabado y protección',
+        description: 'Aplicación de tratamientos para proteger y prolongar la vida útil de la rejilla. Equilibramos durabilidad y estética original.',
+        imageUrl: '/images/servicios/rejillas/4.jpeg',
+      },
+    ],
+  },
+  {
+    icon: '🔶',
+    title: 'Renovación de Pieles con Grabados de Oro',
+    description: 'Sustitución y embellecimiento artesanal de tapicerías de piel con detalles dorados.',
+    steps: [
+      {
+        title: 'Retirada de cuero antiguo',
+        description: 'Eliminación cuidadosa del material deteriorado preservando la estructura. Documentamos patrones y características para la replicación.',
+        imageUrl: '/images/servicios/pieles/1.jpeg',
+      },
+      {
+        title: 'Selección y preparación de la piel',
+        description: 'Elección de pieles de alta calidad y preparación para el trabajo de tapizado. Cortamos y tratamos el material según las necesidades específicas.',
+        imageUrl: '/images/servicios/pieles/2.jpeg',
+      },
+      {
+        title: 'Colocación de piel nueva',
+        description: 'Instalación artesanal de la nueva tapicería siguiendo técnicas tradicionales. Cuidamos cada detalle para un acabado perfecto.',
+        imageUrl: '/images/servicios/pieles/3.jpeg',
+      },
+      {
+        title: 'Ruleteado con oro',
+        description: 'Aplicación de grabados y decoraciones con oro utilizando herramientas especializadas. Creamos diseños personalizados o reproducimos los originales.',
+        imageUrl: '/images/servicios/pieles/4.jpeg',
+      },
+    ],
+  },
 ]; 

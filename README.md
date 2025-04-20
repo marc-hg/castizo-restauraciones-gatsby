@@ -53,3 +53,10 @@ The site is configured for GitHub Pages deployment:
 - [ ] Add real testimonies
 - [ ] Fix ubicacion
 - [ ] SEO optimizations
+
+- [ ] Add new services
+- [ ] Restauraciones de interior de casas rusticas (restauracion y tratamiento antipolilla de vigas antiguas, inmobiliario antiguo, )
+- [ ] Reproduccion de muebles
+- [ ] Restauracion de rejillas de mimbre de sillas antiguas (reespaldos y asientos)
+- [ ] Renovacion de pieles con grabados de oro (retirado cuero antiguo, colocacion de piel nueva, ruleteado con grca de oro)
+- [ ] Pulido de bronze (atriles de bronce, candelabro)
