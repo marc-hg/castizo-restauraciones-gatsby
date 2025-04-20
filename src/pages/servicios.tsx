@@ -83,7 +83,7 @@ export const Head: HeadFC = () => (
     <title>Servicios - Dorados y Restauraciones El Madrileño</title>
     <meta
       name="description"
-      content="Servicios especializados en restauración de muebles antiguos, dorados con pan de oro, reproducción de muebles históricos y restauración de lámparas en A Coruña."
+      content="Servicios especializados en restauración de muebles antiguos, dorados con pan de oro, reproducción de muebles históricos y restauración de lámparas en toda España."
     />
   </>
 );

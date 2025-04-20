@@ -109,7 +109,7 @@ export const Head: HeadFC = () => (
     </title>
     <meta
       name="description"
-      content="Expertos en restauración de muebles antiguos, dorados con pan de oro y reproducción de muebles históricos en A Coruña."
+      content="Expertos en restauración de muebles antiguos, dorados con pan de oro y reproducción de muebles históricos en toda España."
     />
   </>
 );

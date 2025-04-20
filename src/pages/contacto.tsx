@@ -191,7 +191,7 @@ export const Head: HeadFC = () => (
     <title>Contacto - Dorados y Restauraciones El Madrileño</title>
     <meta
       name="description"
-      content="Contacte con nosotros para restauración de muebles antiguos en A Coruña. Presupuesto sin compromiso y servicio de recogida a domicilio."
+      content="Contacte con nosotros para restauración de muebles antiguos en toda España. Presupuesto sin compromiso y servicio de recogida a domicilio."
     />
   </>
 );
