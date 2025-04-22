@@ -42,7 +42,7 @@ const config: GatsbyConfig = {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: 'https://castizorestauraciones.com',
-        sitemap: 'https://castizorestauraciones.com/sitemap-index.xml',
+        sitemap: 'https://castizorestauraciones.com/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/' }]
       }
     }
