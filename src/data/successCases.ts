@@ -32,7 +32,7 @@ export const successCases: SuccessCase[] = [
     title: 'Lámpara de Cristal Colgante',
     initialState: 'Lámpara de latón dañada por el fuego, con cristales sucios y faltantes, y cableado eléctrico quemado',
     clientNeeds: 'Restauración de la estructura de latón, limpieza y reposición de cristales, y actualización del sistema eléctrico',
-    beforeImage: '/images/trabajos-realizados/lampara/antes.jpg',
+    beforeImage: '/images/trabajos-realizados/lampara/antes2.jpg',
     afterImage: '/images/trabajos-realizados/lampara/despues.jpg',
     techniques: [
       'Desmontaje completo de componentes',
