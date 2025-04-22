@@ -8,7 +8,7 @@ const teamMembers = [
     name: "Francisco Javier Horno Escribano",
     role: "Maestro Restaurador",
     description:
-      "Con más de 40 años de experiencia en restauración de muebles antiguos y especialista en dorados. Su dedicación y maestría artesanal le han convertido en un referente en el sector.",
+      "Con más de 40 años de experiencia en restauración de muebles y especialista en dorados. Su dedicación y maestría artesanal le han convertido en un referente en el sector.",
     imageUrl: "/images/paco/paco.jpg",
   },
 ];
@@ -31,8 +31,8 @@ const AboutUsPage = () => {
                   Dorados y Restauraciones El Madrileño nace de una pasión por
                   la artesanía y la preservación del patrimonio mueble. Con más
                   de cuatro décadas de experiencia, nos hemos especializado en
-                  la restauración de muebles antiguos y la aplicación de
-                  técnicas tradicionales de dorado.
+                  la restauración de muebles y la aplicación de técnicas
+                  tradicionales de dorado.
                 </p>
               </div>
             </div>

@@ -1,6 +1,7 @@
 import * as React from "react";
 import { HeadFC } from "gatsby";
 import Layout from "../components/Layout";
+import SEO from "../components/SEO";
 
 const ContactPage = () => {
   return (
@@ -187,11 +188,9 @@ const ContactPage = () => {
 export default ContactPage;
 
 export const Head: HeadFC = () => (
-  <>
-    <title>Contacto - Dorados y Restauraciones El Madrileño</title>
-    <meta
-      name="description"
-      content="Contacte con nosotros para restauración de muebles antiguos en toda España. Presupuesto sin compromiso y servicio de recogida a domicilio."
-    />
-  </>
+  <SEO
+    title="Contacto | Restaurador de Muebles en A Coruña y toda España"
+    description="Taller de restauración de muebles en A Coruña con servicio a nivel nacional. Visítenos en Rúa José Baldomir, 6 o solicite presupuesto sin compromiso. Recogida y entrega a domicilio en toda España."
+    keywords="restaurador muebles A Coruña, restauración muebles España, taller restauración, dorado pan de oro, contacto, presupuesto restauración, recogida a domicilio"
+  />
 );

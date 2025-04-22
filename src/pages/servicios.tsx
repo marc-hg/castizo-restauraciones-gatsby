@@ -22,10 +22,10 @@ const ServicesPage = () => {
               </h2>
               <p className="text-gray-600 mb-4">
                 En Dorados y Restauraciones El Madrileño, nos especializamos en
-                la restauración y conservación de muebles antiguos, utilizando
-                técnicas tradicionales y materiales de la más alta calidad.
-                Nuestro compromiso es preservar el valor histórico y artístico
-                de cada pieza.
+                la restauración y conservación de muebles, utilizando técnicas
+                tradicionales y materiales de la más alta calidad. Nuestro
+                compromiso es preservar el valor histórico y artístico de cada
+                pieza.
               </p>
             </div>
           </section>
@@ -82,7 +82,7 @@ export default ServicesPage;
 export const Head: HeadFC = () => (
   <SEO
     title="Servicios de Restauración | Castizo Restauraciones"
-    description="Servicios especializados en restauración de muebles antiguos, dorados con pan de oro, pulido de bronce, restauración de lámparas, reproducción de muebles, tratamiento antipolilla, rejillas de mimbre y renovación de pieles con grabados de oro."
+    description="Servicios especializados en restauración de muebles, dorados con pan de oro, pulido de bronce, restauración de lámparas, reproducción de muebles, tratamiento antipolilla, rejillas de mimbre y renovación de pieles con grabados de oro."
     keywords="restauración profesional, pulido de bronce, dorado con pan de oro, tratamiento antipolilla, restauración de vigas, restauración de muebles rústicos, reproducción de muebles, rejillas de mimbre, renovación de pieles"
     pathname="/servicios"
   />

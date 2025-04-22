@@ -16,7 +16,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             Dorados y Restauraciones El Madrileño
           </h1>
           <p className="text-xl text-center mt-2">
-            Artesanía y Tradición en Restauración de Muebles en toda España
+            Restauración de Muebles en A Coruña y en toda España
           </p>
           <Link to="/contacto" className="block mt-6 text-center">
             <button className="bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-6 rounded-full transition duration-300">
@@ -123,6 +123,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               <h3 className="text-xl font-bold mb-4">Contacto</h3>
               <p>WhatsApp/Phone: 698 12 62 36</p>
               <p>Email: castizorestauraciones@gmail.com</p>
+              <p className="mt-2">
+                Rúa José Baldomir, 6, bajo
+                <br />
+                15010 A Coruña, España
+              </p>
             </div>
             <div>
               <h3 className="text-xl font-bold mb-4">Enlaces Rápidos</h3>
@@ -150,31 +155,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               <p>Sábados: 10:00 - 14:00</p>
             </div>
           </div>
-          <div className="mt-8 text-center">
-            <div className="text-xs text-gray-300 space-y-2 mb-6 max-w-4xl mx-auto">
-              <p>
-                Los precios pueden variar según la complejidad del trabajo, el
-                estado de la pieza y los materiales necesarios. Todos los
-                presupuestos son personalizados.
-              </p>
-              <p>
-                Las imágenes mostradas son ejemplos de trabajos anteriores y no
-                garantizan resultados idénticos. Cada pieza es única y el
-                resultado final puede variar.
-              </p>
-              <p>
-                El tiempo de entrega es estimado y puede variar según la carga
-                de trabajo y la complejidad del proyecto.
-              </p>
-              <p>
-                No nos hacemos responsables de daños preexistentes o deterioros
-                naturales de las piezas. Se recomienda informar de cualquier
-                condición especial de la pieza antes de iniciar el trabajo.
-              </p>
-            </div>
+          <div className="mt-8 text-center text-sm">
             <p>
-              &copy; {new Date().getFullYear()} Dorados y Restauraciones El
-              Madrileño. Todos los derechos reservados.
+              © {new Date().getFullYear()} Castizo Restauraciones - Restaurador
+              de Muebles en A Coruña
             </p>
           </div>
         </div>

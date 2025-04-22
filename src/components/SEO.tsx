@@ -26,37 +26,71 @@ const SEO: React.FC<SEOProps> = ({
   const schemaOrgJSONLD = [
     {
       "@context": "http://schema.org",
-      "@type": "ProfessionalService",
+      "@type": "LocalBusiness",
       "@id": siteUrl,
-      name: "Dorados y Restauraciones El Madrileño",
+      name: "Castizo Restauraciones - Restaurador de Muebles en A Coruña",
+      alternateName: "Dorados y Restauraciones El Madrileño",
       url: siteUrl,
       logo: `${siteUrl}${defaultImage}`,
       image: imageUrl,
       description: description,
       telephone: "+34698126236",
       email: "castizorestauraciones@gmail.com",
+      priceRange: "€€",
       address: {
         "@type": "PostalAddress",
         streetAddress: "Rúa José Baldomir, 6, bajo",
         addressLocality: "A Coruña",
-        addressRegion: "A Coruña",
+        addressRegion: "Galicia",
         postalCode: "15010",
         addressCountry: "ES",
       },
-      openingHours: "Mo,Tu,We,Th,Fr 09:00-18:00 Sa 10:00-14:00",
-      priceRange: "€€",
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 43.3635464,
+        longitude: -8.4190863,
+      },
+      openingHoursSpecification: [
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          opens: "09:00",
+          closes: "18:00",
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: "Saturday",
+          opens: "10:00",
+          closes: "14:00",
+        },
+      ],
+      areaServed: [
+        {
+          "@type": "GeoCircle",
+          geoMidpoint: {
+            "@type": "GeoCoordinates",
+            latitude: 43.3635464,
+            longitude: -8.4190863,
+          },
+          geoRadius: "50000",
+        },
+        {
+          "@type": "Country",
+          name: "España",
+        },
+      ],
       sameAs: ["https://www.instagram.com/castizorestauraciones/"],
       hasOfferCatalog: {
         "@type": "OfferCatalog",
-        name: "Servicios de Restauración",
+        name: "Servicios de Restauración en A Coruña y toda España",
         itemListElement: [
           {
             "@type": "Offer",
             itemOffered: {
               "@type": "Service",
-              name: "Restauración de Muebles Antiguos",
+              name: "Restauración de Muebles en A Coruña y toda España",
               description:
-                "Restauramos y preservamos muebles con técnicas tradicionales.",
+                "Restauramos y preservamos muebles con técnicas tradicionales en nuestro taller de A Coruña, con servicio en toda España.",
             },
           },
           {

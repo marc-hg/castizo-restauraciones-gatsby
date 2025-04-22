@@ -105,8 +105,8 @@ export default IndexPage;
 
 export const Head: HeadFC = () => (
   <SEO
-    title="Castizo Restauraciones | Restauración de Muebles Antiguos, Dorados y Pulido de Bronce"
-    description="Especialistas en restauración profesional de muebles antiguos, dorados con pan de oro, pulido de bronce y restauración de piezas religiosas en toda España. Recuperamos el esplendor original de sus piezas más valiosas."
-    keywords="restauración muebles antiguos, dorado con pan de oro, pulido de bronce, restauración de lámparas, restauración religiosa, restauración de vigas, muebles rústicos, rejillas de mimbre, restauración de pieles"
+    title="Restaurador de Muebles en A Coruña y toda España | Castizo Restauraciones"
+    description="Taller especializado en restauración de muebles en A Coruña con servicio en toda España. Dorados con pan de oro, pulido de bronce y restauración de piezas religiosas. Recogida y entrega a domicilio."
+    keywords="restaurador de muebles A Coruña, restauración muebles España, Galicia, dorado con pan de oro, pulido de bronce, restauración religiosa, restauración de lámparas, recogida a domicilio"
   />
 );

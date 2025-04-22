@@ -10,7 +10,7 @@ export interface Service {
 export const services: Service[] = [
   {
     icon: '🛠️',
-    title: 'Restauración de Muebles Antiguos',
+    title: 'Restauración de Muebles',
     description: 'Restauramos y preservamos muebles con técnicas tradicionales.',
     steps: [
       {
