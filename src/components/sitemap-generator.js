@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 // Update this with your actual domain
-const BASE_URL = "https://www.castizo-restauraciones.com";
+const BASE_URL = "https://castizorestauraciones.com";
 
 // Define your site pages
 const pages = [

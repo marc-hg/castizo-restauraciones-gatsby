@@ -16,8 +16,8 @@ const SEO: React.FC<SEOProps> = ({
   pathname,
   image,
 }) => {
-  const siteUrl = "https://www.castizo-restauraciones.com"; // Update with your actual domain
-  const defaultImage = "/images/logo.png"; // Update with your default image path
+  const siteUrl = "https://castizorestauraciones.com";
+  const defaultImage = "/images/icon.jpeg";
 
   const url = `${siteUrl}${pathname || ""}`;
   const imageUrl = image ? `${siteUrl}${image}` : `${siteUrl}${defaultImage}`;
@@ -28,26 +28,24 @@ const SEO: React.FC<SEOProps> = ({
       "@context": "http://schema.org",
       "@type": "ProfessionalService",
       "@id": siteUrl,
-      name: "Castizo Restauraciones",
+      name: "Dorados y Restauraciones El Madrileño",
       url: siteUrl,
       logo: `${siteUrl}${defaultImage}`,
       image: imageUrl,
       description: description,
-      telephone: "+34-XXX-XXX-XXX", // Update with your actual phone number
-      email: "info@castizo-restauraciones.com", // Update with your actual email
+      telephone: "+34698126236",
+      email: "castizorestauraciones@gmail.com",
       address: {
         "@type": "PostalAddress",
-        addressLocality: "Madrid", // Update with your actual city
-        addressRegion: "Madrid", // Update with your actual region
+        streetAddress: "Rúa José Baldomir, 6, bajo",
+        addressLocality: "A Coruña",
+        addressRegion: "A Coruña",
+        postalCode: "15010",
         addressCountry: "ES",
       },
-      openingHours: "Mo,Tu,We,Th,Fr 09:00-18:00", // Update with your actual hours
+      openingHours: "Mo,Tu,We,Th,Fr 09:00-18:00 Sa 10:00-14:00",
       priceRange: "€€",
-      sameAs: [
-        // Update with your actual social media URLs
-        "https://www.facebook.com/castizorestaura",
-        "https://www.instagram.com/castizo_restauraciones",
-      ],
+      sameAs: ["https://www.instagram.com/castizorestauraciones/"],
       hasOfferCatalog: {
         "@type": "OfferCatalog",
         name: "Servicios de Restauración",
