@@ -1,0 +1,30 @@
+---
+description: Provides an overview of the Gatsby website's file structure, key configuration files, components, and pages to help navigate the codebase efficiently.
+globs: 
+alwaysApply: false
+---
+@agent_type: Provides an overview of the Gatsby website's file structure, key configuration files, components, and pages to help navigate the codebase efficiently.
+
+# Project Structure Guide
+
+This is a Gatsby-based website for Castizo Restauraciones, a furniture restoration business in Spain.
+
+## Main Configuration
+- [gatsby-config.ts](mdc:gatsby-config.ts): Contains all Gatsby configuration, including plugins, site metadata, and SEO settings.
+- [package.json](mdc:package.json): Project dependencies and scripts.
+
+## Content Structure
+- [src/data/successCases.ts](mdc:src/data/successCases.ts): Contains case studies of restoration projects with before/after images.
+
+## Components
+- [src/components/SEO.tsx](mdc:src/components/SEO.tsx): SEO component with Schema.org JSON-LD structured data.
+- [src/components/Layout.tsx](mdc:src/components/Layout.tsx): Main layout component with header, navigation, and footer.
+
+## Pages
+- [src/pages/index.tsx](mdc:src/pages/index.tsx): Homepage with main sections.
+- [src/pages/contacto.tsx](mdc:src/pages/contacto.tsx): Contact page with business information.
+- [src/pages/casos-de-exito.tsx](mdc:src/pages/casos-de-exito.tsx): Success cases/portfolio page.
+
+## Static Assets
+- [static/images/](mdc:static/images): Directory containing images used throughout the site.
+- [static/robots.txt](mdc:static/robots.txt): SEO configuration for search engine crawlers.

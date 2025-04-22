@@ -1,0 +1,52 @@
+---
+description: Explains how to manage website content including portfolio entries, contact information, and images with proper data structures and file organization.
+globs: 
+alwaysApply: false
+---
+@agent_type: Explains how to manage website content including portfolio entries, contact information, and images with proper data structures and file organization.
+
+# Content Management Guide
+
+This guide explains how to manage and update the content on the Castizo Restauraciones website.
+
+## Success Cases / Portfolio
+
+The portfolio showcases restoration projects with before/after images. Data is stored in:
+- [src/data/successCases.ts](mdc:src/data/successCases.ts)
+
+Each case follows this structure:
+```typescript
+{
+  title: 'Project Title',
+  initialState: 'Description of the item before restoration',
+  clientNeeds: 'What the client wanted to achieve',
+  beforeImage: '/images/trabajos-realizados/category/antes.jpeg',
+  afterImage: '/images/trabajos-realizados/category/despues.jpeg',
+  techniques: [
+    'Technique 1',
+    'Technique 2',
+    // etc.
+  ],
+  materials: [
+    'Material 1',
+    'Material 2',
+    // etc.
+  ],
+  results: 'Description of the final restored piece and outcomes',
+}
+```
+
+## Contact Information
+
+Business contact details appear in multiple locations:
+1. The SEO component's structured data in [src/components/SEO.tsx](mdc:src/components/SEO.tsx)
+2. The footer in [src/components/Layout.tsx](mdc:src/components/Layout.tsx)
+3. The contact page in [src/pages/contacto.tsx](mdc:src/pages/contacto.tsx)
+
+When updating contact info, be sure to change it in all these locations.
+
+## Images
+
+Images are stored in the `/static/images/` directory:
+- Logo and icons in the root images directory
+- Work samples in organized subdirectories under `trabajos-realizados/`
