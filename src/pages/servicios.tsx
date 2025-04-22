@@ -3,6 +3,7 @@ import { HeadFC } from "gatsby";
 import Layout from "../components/Layout";
 import ServiceGallery from "../components/ServiceGallery";
 import { services } from "../data/services";
+import SEO from "../components/SEO";
 
 const ServicesPage = () => {
   return (
@@ -79,11 +80,10 @@ const ServicesPage = () => {
 export default ServicesPage;
 
 export const Head: HeadFC = () => (
-  <>
-    <title>Servicios - Dorados y Restauraciones El Madrileño</title>
-    <meta
-      name="description"
-      content="Servicios especializados en restauración de muebles antiguos, dorados con pan de oro, reproducción de muebles históricos y restauración de lámparas en toda España."
-    />
-  </>
+  <SEO
+    title="Servicios de Restauración | Castizo Restauraciones"
+    description="Servicios especializados en restauración de muebles antiguos, dorados con pan de oro, pulido de bronce, restauración de lámparas, reproducción de muebles, tratamiento antipolilla, rejillas de mimbre y renovación de pieles con grabados de oro."
+    keywords="restauración profesional, pulido de bronce, dorado con pan de oro, tratamiento antipolilla, restauración de vigas, restauración de muebles rústicos, reproducción de muebles, rejillas de mimbre, renovación de pieles"
+    pathname="/servicios"
+  />
 );

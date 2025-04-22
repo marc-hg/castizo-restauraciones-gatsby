@@ -5,6 +5,7 @@ import ServiceCard from "../components/ServiceCard";
 import SuccessCase from "../components/SuccessCase";
 import { successCases } from "../data/successCases";
 import { services } from "../data/services";
+import SEO from "../components/SEO";
 
 const IndexPage = () => {
   return (
@@ -103,13 +104,9 @@ const IndexPage = () => {
 export default IndexPage;
 
 export const Head: HeadFC = () => (
-  <>
-    <title>
-      Dorados y Restauraciones El Madrileño - Restauración de Muebles
-    </title>
-    <meta
-      name="description"
-      content="Expertos en restauración de muebles antiguos, dorados con pan de oro y reproducción de muebles históricos en toda España."
-    />
-  </>
+  <SEO
+    title="Castizo Restauraciones | Restauración de Muebles Antiguos, Dorados y Pulido de Bronce"
+    description="Especialistas en restauración profesional de muebles antiguos, dorados con pan de oro, pulido de bronce y restauración de piezas religiosas en toda España. Recuperamos el esplendor original de sus piezas más valiosas."
+    keywords="restauración muebles antiguos, dorado con pan de oro, pulido de bronce, restauración de lámparas, restauración religiosa, restauración de vigas, muebles rústicos, rejillas de mimbre, restauración de pieles"
+  />
 );
