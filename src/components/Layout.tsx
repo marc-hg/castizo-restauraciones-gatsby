@@ -15,9 +15,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <h1 className="text-4xl font-bold text-center">
             Dorados y Restauraciones El Madrileño
           </h1>
-          <p className="text-xl text-center mt-2">
+          <h2 className="text-xl text-center mt-2">
             Restauración de Muebles en A Coruña y en toda España
-          </p>
+          </h2>
           <Link to="/contacto" className="block mt-6 text-center">
             <button className="bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-6 rounded-full transition duration-300">
               Contáctanos Ahora
