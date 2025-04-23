@@ -24,6 +24,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           property="og:image"
           content="https://castizorestauraciones.com/icon.jpeg"
         />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta property="og:url" content="https://castizorestauraciones.com" />
         <meta property="og:type" content="website" />
       </Helmet>
