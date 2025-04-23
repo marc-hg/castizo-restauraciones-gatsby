@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
+import { Helmet } from "react-helmet";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -10,6 +11,22 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <Helmet>
+        <meta
+          property="og:title"
+          content="Dorados y Restauraciones El Madrileño - Restauración de Muebles"
+        />
+        <meta
+          property="og:description"
+          content="Expertos en restauración de muebles, reproducción de muebles, dorados con pan de oro, pulido de bronze y restauración de casas en A Coruña y en toda España"
+        />
+        <meta
+          property="og:image"
+          content="https://castizorestauraciones.com/icon.jpeg"
+        />
+        <meta property="og:url" content="https://castizorestauraciones.com" />
+        <meta property="og:type" content="website" />
+      </Helmet>
       <header className="bg-gradient-to-r from-amber-900 to-amber-800 text-white py-8">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold text-center">

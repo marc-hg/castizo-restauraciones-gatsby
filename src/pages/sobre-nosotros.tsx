@@ -2,6 +2,7 @@ import * as React from "react";
 import { HeadFC, withPrefix } from "gatsby";
 import Layout from "../components/Layout";
 import Card from "../components/Card";
+import SEO from "../components/SEO";
 
 const teamMembers = [
   {
@@ -95,11 +96,9 @@ const AboutUsPage = () => {
 export default AboutUsPage;
 
 export const Head: HeadFC = () => (
-  <>
-    <title>Sobre Nosotros - Dorados y Restauraciones El Madrileño</title>
-    <meta
-      name="description"
-      content="Conoce nuestra historia, valores y al maestro artesano Francisco Javier Horno Escribano con más de 40 años de experiencia en restauración."
-    />
-  </>
+  <SEO
+    title="Sobre Nosotros - Dorados y Restauraciones El Madrileño"
+    description="Conoce nuestra historia, valores y al maestro artesano Francisco Javier Horno Escribano con más de 40 años de experiencia en restauración."
+    keywords="restaurador de muebles, historia, experiencia, taller de restauración, A Coruña, España"
+  />
 );

@@ -3,6 +3,7 @@ import { HeadFC } from "gatsby";
 import Layout from "../components/Layout";
 import SuccessCase from "../components/SuccessCase";
 import { successCases } from "../data/successCases";
+import SEO from "../components/SEO";
 
 const SuccessCasesPage = () => {
   return (
@@ -84,11 +85,9 @@ const SuccessCasesPage = () => {
 export default SuccessCasesPage;
 
 export const Head: HeadFC = () => (
-  <>
-    <title>Trabajos Realizados - Dorados y Restauraciones El Madrileño</title>
-    <meta
-      name="description"
-      content="Descubre nuestros trabajos realizados en restauración de muebles y dorados con pan de oro."
-    />
-  </>
+  <SEO
+    title="Trabajos Realizados - Dorados y Restauraciones El Madrileño"
+    description="Descubre nuestros trabajos realizados en restauración de muebles y dorados con pan de oro."
+    keywords="portafolio, trabajos realizados, antes y después, restauración de muebles, dorado con pan de oro, Castizo Restauraciones"
+  />
 );
