@@ -47,7 +47,7 @@ export const services: Service[] = [
       },
       {
         title: 'Aplicación del bol',
-        description: 'Aplicación de capas de bol rojo o negro según la técnica tradicional. El bol proporciona la base perfecta para el dorado.',
+        description: 'Aplicación de capas de bol rojo con cola de vaca y sulfato cálcico. El bol proporciona la base perfecta para el dorado.',
         imageUrl: '/images/servicios/dorados/2.jpeg',
       },
       {

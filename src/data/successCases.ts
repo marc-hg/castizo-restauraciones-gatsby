@@ -63,7 +63,9 @@ export const successCases: SuccessCase[] = [
     materials: [
       'Madera de pino para bastidor',
       'Pan de oro de 23.75 quilates',
-      'Bol rojo tradicional',
+      'Cola de vaca',
+      'Sulfato cálcico',
+      'Bol rojo',
     ],
     results: 'Restauración completa del espejo recuperando toda la ornamentación dorada y proporcionando una estructura sólida que garantiza su conservación a largo plazo.',
   },
@@ -81,7 +83,9 @@ export const successCases: SuccessCase[] = [
     ],
     materials: [
       'Pan de oro de alta calidad',
-      'Bol rojo tradicional',
+      'Bol rojo',
+      'Cola de vaca',
+      'Sulfato cálcico',
       'Base de preparación tradicional',
       'Productos específicos para limpieza de policromía',
     ],
@@ -141,8 +145,9 @@ export const successCases: SuccessCase[] = [
     ],
     materials: [
       'Pan de oro de 23.75 quilates',
-      'Bol rojo tradicional',
-      'Colas orgánicas para restauración',
+      'Bol rojo',
+      'Cola de vaca',
+      'Sulfato cálcico',
       'Masillas de reparación especiales para tallas',
     ],
     results: 'Espléndida recuperación del marco dorado con todos sus detalles decorativos, realzando la belleza del crucifijo y la tapicería ornamental del fondo para crear un conjunto armonioso de alto valor artístico y religioso.',
