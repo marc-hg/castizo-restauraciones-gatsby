@@ -43,7 +43,6 @@ export const successCases: SuccessCase[] = [
     materials: [
       'Productos para restauración de latón',
       'Cristales facetados de reposición',
-      'Sistema eléctrico certificado',
       'Productos específicos para limpieza de cristal',
     ],
     results: 'Transformación completa de la lámpara recuperando el brillo del latón y la transparencia de los cristales, combinando la estética original con un sistema eléctrico moderno y seguro.',
