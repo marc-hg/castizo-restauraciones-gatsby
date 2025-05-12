@@ -11,6 +11,26 @@ export interface SuccessCase {
 
 export const successCases: SuccessCase[] = [
   {
+    title: 'Restauración de Lámpara Antigua',
+    initialState: 'Lámpara antigua con base deteriorada, estructura oxidada y sistema eléctrico obsoleto',
+    clientNeeds: 'Restaurar la lámpara manteniendo su carácter original y actualizar el sistema eléctrico para su uso seguro',
+    beforeImage: '/images/trabajos-realizados/lampara1/antes.jpg',
+    afterImage: '/images/trabajos-realizados/lampara1/despues.jpg',
+    techniques: [
+      'Limpieza y tratamiento de óxido',
+      'Restauración de la base decorativa',
+      'Renovación completa del sistema eléctrico',
+      'Montaje y ajuste de pantalla',
+    ],
+    materials: [
+      'Productos específicos para tratamiento de metales',
+      'Material eléctrico certificado',
+      'Pantalla nueva a medida',
+      'Barnices y acabados protectores',
+    ],
+    results: 'Recuperación completa de la funcionalidad y estética de la lámpara, conservando su valor decorativo original mientras se garantiza un funcionamiento eléctrico seguro y eficiente.',
+  },
+  {
     title: 'Restauración de Consola Tallada',
     initialState: 'Estructura debilitada con ensambles sueltos, pérdida de elementos decorativos y acabado deteriorado',
     clientNeeds: 'Recuperar la estabilidad estructural y restaurar la belleza original de los elementos tallados',
